@@ -108,12 +108,8 @@ class homepageAdm(homepageAdmTemplate):
     return valor
     
   def timer_1_tick(self, **event_args):
-    """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
-    self.reload_dados()    
-    pass
-
-
-
+    with anvil.server.no_loading_indicator:
+      self.reload_dados()
 
 
  
