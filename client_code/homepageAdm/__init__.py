@@ -47,7 +47,19 @@ class homepageAdm(homepageAdmTemplate):
     self.h111_red_marker.visible = False   
     self.h111_yellow_marker.visible = False   
     self.h111_ok_image.visible = False
-
+  
+  #This function will server to parse the name of the images overlapping the floor plan,
+  #    finding out to what room it belongs and then querying the database to find out whether 
+  #    given marker should be visible.
+  def findMarkerInfo(self, a_string, **event_args):
+    markerInfo = {'room':"", 'type':''}
+    firstUnderscore = a_string.find("_")
+    markerInfo['room'] = f'{a_string[:1].upper()}-{a_string[1:firstUnderscore]}'
+    secondPartOfString = a_string[firstUnderscore+1:]
+    secondUnderscore = secondPartOfString.find("_")
+    markerInfo['type'] = secondPartOfString[:secondUnderscore]
+    return markerInfo
+  
   def setup_FloorPlan_Markers(self, room=None, **event_args):
     markers_list = self.xy_panel_1.get_components()
     sala = anvil.server.call('get_sala_pelo_nome', nome_sala=room)
