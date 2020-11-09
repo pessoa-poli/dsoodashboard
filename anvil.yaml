@@ -14,6 +14,7 @@ allow_embedding: false
 name: DSOO Dashboard
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
 metadata: {}
+startup_form: planta_primeiro_andar
 native_deps: {head_html: ''}
 db_schema:
 - name: nivel_acesso
