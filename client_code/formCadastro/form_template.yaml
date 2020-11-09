@@ -70,11 +70,10 @@ components:
       name: label_5
       layout_properties: {grid_position: 'QWHHIO,FYADJO'}
       event_bindings: {}
-    - type: TextBox
+    - type: DropDown
       properties: {}
-      name: text_box_papelrequisitado
-      layout_properties: {grid_position: 'PNBXSC,QANPDL'}
-      event_bindings: {}
+      name: drop_down_1
+      layout_properties: {grid_position: 'OIJXNX,YOVGFN'}
     - type: Label
       properties: {role: formlabel, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: E-mail*, font_size: null, font: '', spacing_above: small,
@@ -111,14 +110,6 @@ components:
       name: text_box_confirmasenha
       layout_properties: {grid_position: 'DVWAPY,NYMMCO'}
       event_bindings: {}
-    - type: RadioButton
-      properties: {role: null, selected: false, align: left, tooltip: '', border: '',
-        enabled: true, foreground: blue, value: '', visible: true, text: Concordo com os termos e condições.,
-        font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
-        background: '', bold: false, group_name: radioGroup1, underline: false}
-      name: radio_button_termosecondicoes
-      layout_properties: {grid_position: 'PVIAWS,BJKITY'}
-      event_bindings: {}
     - type: Button
       properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: Criar conta, font_size: null, font: '',
@@ -133,22 +124,6 @@ components:
         background: '', bold: false, underline: false, icon: ''}
       name: button_cancelar
       layout_properties: {grid_position: 'MKHVQP,KWHODS'}
-      event_bindings: {}
-    - type: Label
-      properties: {role: formlabel, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: ou, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: label_10
-      layout_properties: {grid_position: 'NPFECT,EKFMAG'}
-      event_bindings: {}
-    - type: Button
-      properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: cadastre-se com Google, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: 'fa:google'}
-      name: button_2
-      layout_properties: {grid_position: 'ZJRXGW,KDONYW'}
       event_bindings: {}
     event_bindings: {}
 is_package: true

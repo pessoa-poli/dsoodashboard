@@ -142,7 +142,7 @@ components:
       visible: true, spacing_above: small, spacing_below: small, item_template: limpeza_repeater_template,
       background: ''}
     name: repeating_panel_limpeza
-    layout_properties: {grid_position: 'SPYGGC,XMPXHT'}
+    layout_properties: {grid_position: 'SPYGGC,QXROLF'}
     event_bindings: {}
   event_bindings: {}
 - type: FlowPanel
