@@ -17,16 +17,6 @@ metadata: {}
 startup_form: planta_primeiro_andar
 native_deps: {head_html: ''}
 db_schema:
-- name: nivel_acesso
-  id: 87960
-  python_name: nivel_acesso
-  columns:
-    KT2LRg4yC90=:
-      name: nome
-      type: string
-      admin_ui: {order: 0, width: 200}
-  access: {python_name: nivel_acesso, app_id: B4CFZ34JETACVQWU, server: search, client: none,
-    table_mapping_name: null, table_mapping_id: null, table_id: 87960}
 - name: salas
   id: 87962
   python_name: salas
@@ -97,6 +87,16 @@ db_schema:
       admin_ui: {order: 5, width: 200}
   access: {python_name: salas, app_id: B4CFZ34JETACVQWU, server: full, client: full,
     table_mapping_name: null, table_mapping_id: null, table_id: 87962}
+- name: nivel_acesso
+  id: 87960
+  python_name: nivel_acesso
+  columns:
+    KT2LRg4yC90=:
+      name: nome
+      type: string
+      admin_ui: {order: 0, width: 200}
+  access: {python_name: nivel_acesso, app_id: B4CFZ34JETACVQWU, server: search, client: none,
+    table_mapping_name: null, table_mapping_id: null, table_id: 87960}
 - name: nivel_risco
   id: 87963
   python_name: nivel_risco

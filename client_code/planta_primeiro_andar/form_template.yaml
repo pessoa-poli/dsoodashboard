@@ -4,7 +4,7 @@ container:
   event_bindings: {}
 components:
 - type: XYPanel
-  properties: {role: scrollable, width: 758, align: center, height: 181, tooltip: '',
+  properties: {role: scrollable, width: 758, align: center, height: 285, tooltip: '',
     border: '', foreground: '', visible: true, spacing_above: small, spacing_below: small,
     background: ''}
   name: xy_panel_primeiroandar
@@ -16,74 +16,90 @@ components:
       source: _/theme/1_Andar_8000pixels.PNG, spacing_below: small, background: '',
       horizontal_align: center}
     name: image_1
-    layout_properties: {grid_position: 'VXNHYZ,WEDETB', x: 10, y: 0, width: 679}
+    layout_properties: {grid_position: 'VXNHYZ,WEDETB', x: -316, y: 0, width: 1142}
     event_bindings: {}
-- type: Image
-  properties: {role: null, vertical_align: center, height: '20', tooltip: '', border: '',
-    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
-    source: _/theme/red-circle.png, spacing_below: small, background: '', horizontal_align: center}
-  name: image_redcircle
-  layout_properties: {x: 326.75, y: 50, width: 116, grid_position: 'QXVQOM,FALYFY'}
-  event_bindings: {}
-- type: Image
-  properties: {role: null, vertical_align: center, height: '20', tooltip: '', border: '',
-    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
-    source: _/theme/yellow-circle.png, spacing_below: small, background: '', horizontal_align: center}
-  name: image_yellowcircle
-  layout_properties:
-    col_widths: {}
-    grid_position: PYRQYV,NFZSTC
-  event_bindings: {}
-- type: Image
-  properties: {role: null, vertical_align: center, height: '20', tooltip: '', border: '',
-    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
-    source: _/theme/green-circle.png, spacing_below: small, background: '', horizontal_align: center}
-  name: image_greencircle
-  layout_properties:
-    col_widths: {}
-    grid_position: DZMUJK,OKJEIV
-  event_bindings: {}
-- type: Image
-  properties: {role: null, vertical_align: center, height: '20', tooltip: '', border: '',
-    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
-    source: _/theme/settings.png, spacing_below: small, background: '', horizontal_align: center}
-  name: image_settings
-  layout_properties: {grid_position: 'UIKOWJ,PDDIKG'}
-  event_bindings: {}
-- type: Image
-  properties: {role: null, vertical_align: center, height: '20', tooltip: '', border: '',
-    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
-    source: _/theme/broom.png, spacing_below: small, background: '', horizontal_align: center}
-  name: image_broom
-  layout_properties:
-    col_widths: {}
-    grid_position: VCEUAQ,JNLCMW
-  event_bindings: {}
-- type: Image
-  properties: {role: null, vertical_align: center, height: '20', tooltip: '', border: '',
-    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
-    source: _/theme/ok.png, spacing_below: small, background: '', horizontal_align: center}
-  name: image_ok
-  layout_properties:
-    col_widths: {}
-    grid_position: NDLWBK,TUETBP
-  event_bindings: {}
-- type: Image
-  properties: {role: null, vertical_align: center, height: '20', tooltip: '', border: '',
-    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
-    source: _/theme/co2-critico.png, spacing_below: small, background: '', horizontal_align: center}
-  name: image_co2critico
-  layout_properties:
-    col_widths: {}
-    grid_position: XVPOXG,PKCJEZ
-  event_bindings: {}
-- type: Image
-  properties: {role: null, vertical_align: center, height: '20', tooltip: '', border: '',
-    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
-    source: _/theme/overcapacity.png, spacing_below: small, background: '', horizontal_align: center}
-  name: image_overcapacity
-  layout_properties:
-    col_widths: {}
-    grid_position: YJYQJP,BHXQAA
-  event_bindings: {}
+  - type: FlowPanel
+    properties: {}
+    name: h111_flow_panel_markers_holder
+    layout_properties: {x: 101, y: 198, width: 179, grid_position: 'BQXTKN,SJGBEA'}
+    components:
+    - type: Image
+      properties: {role: null, vertical_align: center, height: '20', tooltip: '',
+        border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+        source: _/theme/red-circle.png, spacing_below: small, background: '', horizontal_align: center}
+      name: image_redcircle
+      layout_properties: {x: 102, y: 190, width: 20, grid_position: 'QXVQOM,FALYFY'}
+      event_bindings: {}
+    - type: Image
+      properties: {role: null, vertical_align: center, height: '20', tooltip: '',
+        border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+        source: _/theme/yellow-circle.png, spacing_below: small, background: '', horizontal_align: center}
+      name: image_yellowcircle
+      layout_properties:
+        col_widths: {}
+        grid_position: PYRQYV,NFZSTC
+        width: 23
+      event_bindings: {}
+    - type: Image
+      properties: {role: null, vertical_align: center, height: '20', tooltip: '',
+        border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+        source: _/theme/green-circle.png, spacing_below: small, background: '', horizontal_align: center}
+      name: image_greencircle
+      layout_properties:
+        col_widths: {}
+        grid_position: DZMUJK,OKJEIV
+        width: 23
+      event_bindings: {}
+    - type: Image
+      properties: {role: null, vertical_align: center, height: 24, tooltip: '', border: '',
+        foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+        source: _/theme/ok.png, spacing_below: small, background: '', horizontal_align: center}
+      name: image_ok
+      layout_properties:
+        col_widths: {}
+        grid_position: NDLWBK,TUETBP
+        x: 31
+        y: 161
+        width: 34
+      event_bindings: {}
+    - type: Image
+      properties: {role: null, vertical_align: center, height: '20', tooltip: '',
+        border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+        source: _/theme/settings.png, spacing_below: small, background: '', horizontal_align: center}
+      name: image_settings
+      layout_properties: {grid_position: 'UIKOWJ,PDDIKG', width: 27}
+      event_bindings: {}
+    - type: Image
+      properties: {role: null, vertical_align: center, height: '20', tooltip: '',
+        border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+        source: _/theme/co2-critico.png, spacing_below: small, background: '', horizontal_align: center}
+      name: image_co2critico
+      layout_properties:
+        col_widths: {}
+        grid_position: XVPOXG,PKCJEZ
+        width: 29
+      event_bindings: {}
+    - type: Image
+      properties: {role: null, vertical_align: center, height: '20', tooltip: '',
+        border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+        source: _/theme/broom.png, spacing_below: small, background: '', horizontal_align: center}
+      name: image_broom
+      layout_properties:
+        col_widths: {}
+        grid_position: VCEUAQ,JNLCMW
+        width: 25
+      event_bindings: {}
+    - type: Image
+      properties: {role: null, vertical_align: center, height: '20', tooltip: '',
+        border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+        source: _/theme/overcapacity.png, spacing_below: small, background: '', horizontal_align: center}
+      name: image_overcapacity
+      layout_properties:
+        col_widths: {}
+        grid_position: YJYQJP,BHXQAA
+        width: 28
+        x: 287.25
+        y: 169
+      event_bindings: {}
+    event_bindings: {}
 is_package: true
