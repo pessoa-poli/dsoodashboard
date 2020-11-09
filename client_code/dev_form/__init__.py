@@ -24,5 +24,10 @@ class dev_form(dev_formTemplate):
   def buscar_responsavel_click(self, **event_args):
     anvil.server.call('buscar_responsavel', nome_sala='H-111', limpeza=False)
 
+  def get_sala_pelo_id_click(self, **event_args):
+    sala = anvil.server.call('get_sala_pelo_nome', nome_sala="H-111")
+    print(sala)
+
+
 
 

@@ -20,7 +20,7 @@ class homepageAdm(homepageAdmTemplate):
     self.dropdown_bloco.items = ["Bloco A","Bloco B","Bloco C","Bloco D","Bloco E","Bloco F","Bloco G","Bloco H",]
     self.dropdown_bloco.selected_value = self.dropdown_bloco.items[7]
     self.hide_markers()
-    self.setup_FloorPlan_Markers("h111")
+    self.setup_FloorPlan_Markers("H-111")
     self.visao_geral_link.underline = True
     
   def h111_marker_mouse_down(self, x, y, button, **event_args):
@@ -49,7 +49,8 @@ class homepageAdm(homepageAdmTemplate):
     self.h111_ok_image.visible = False
 
   def setup_FloorPlan_Markers(self, room=None, **event_args):
-    sala = anvil.server.call('get_sala_pelo_nome', nome_sala="H-111")
+    sala = anvil.server.call('get_sala_pelo_nome', nome_sala=room)
+    print(sala)
     critico = False
     if sala['co2'] >= 700:
       self.h111_co2_image.visible = True
@@ -72,11 +73,11 @@ class homepageAdm(homepageAdmTemplate):
     else:
       self.h111_broom_image.visible = False
     if sala['nivel_risco']['risco'] == "verde":
-      self.h111_green_marker.visible = True      
+      self.h111_green_marker.visible = True
     if sala['nivel_risco']['risco'] == "vermelho":
-      self.h111_red_marker.visible = True      
+      self.h111_red_marker.visible = True
     if sala['nivel_risco']['risco'] == "amarelo":
-      self.h111_yellow_marker.visible = True    
+      self.h111_yellow_marker.visible = True
     if not critico:
       self.h111_ok_image.visible = True
     else:
@@ -85,7 +86,7 @@ class homepageAdm(homepageAdmTemplate):
   def reload_dados(self, **event_args):
     self.setupData()
     self.refresh_data_bindings()
-    self.setup_FloorPlan_Markers()
+    self.setup_FloorPlan_Markers(room="H-111")
     
   def link_sair_click(self, **event_args):
     anvil.users.logout()

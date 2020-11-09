@@ -188,7 +188,7 @@ components:
   event_bindings: {}
 - type: Button
   properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
-    foreground: '', visible: true, text: 'get_sala_pelo_id
+    foreground: '', visible: true, text: 'get_sala_pelo_nome
 
       ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
     italic: false, background: '', bold: false, underline: false, icon: ''}
@@ -196,7 +196,7 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: WOONER,METGEX
-  event_bindings: {}
+  event_bindings: {click: get_sala_pelo_id_click}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Retorno botão get_total salas, font_size: null, font: '', spacing_above: small,
