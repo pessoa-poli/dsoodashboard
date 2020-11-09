@@ -143,8 +143,8 @@ class homepageAdm(homepageAdmTemplate):
   def timer_1_tick(self, **event_args):
     with anvil.server.no_loading_indicator:
       self.reload_dados()
-
-
+      
+  def 
  
 
 
