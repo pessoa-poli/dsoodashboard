@@ -8,13 +8,12 @@ services:
     confirm_email: true, require_secure_passwords: true, allow_remember_me: true,
     remember_me_days: 30}
   server_config: {user_table: users}
-startup: {type: form, module: homepageComum}
+startup: {type: form, module: homepageAdm}
 package_name: DSOO_Dashboard
 allow_embedding: false
 name: DSOO Dashboard
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
 metadata: {}
-startup_form: planta_primeiro_andar
 native_deps: {head_html: ''}
 db_schema:
 - name: salas
