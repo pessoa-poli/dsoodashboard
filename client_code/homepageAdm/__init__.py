@@ -65,25 +65,7 @@ class homepageAdm(homepageAdmTemplate):
     sala = anvil.server.call('get_sala_pelo_nome', nome_sala=room)
     print(sala)
     critico = False
-    
-    for component in markers_list:
-      if component.name == f'{room}_ok_image':
-        pass
-      if component.name == f'{room}_broom_image':
-        pass
-      if component.name == f'{room}_co2_image':
-        pass
-      if component.name == f'{room}_maintenance_image':
-        pass
-      if component.name == f'{room}_overcapacity_image':
-        pass
-      if component.name == f'{room}_green_marker':
-        pass
-      if component.name == f'{room}_yellow_marker':
-        pass
-      if component.name == f'{room}_red_marker':
-        pass
-    
+          
     if sala['co2'] >= 700:
       self.h111_co2_image.visible = True
       critico = True
@@ -143,8 +125,7 @@ class homepageAdm(homepageAdmTemplate):
   def timer_1_tick(self, **event_args):
     with anvil.server.no_loading_indicator:
       self.reload_dados()
-      
-  def 
+
  
 
 
