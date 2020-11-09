@@ -1,0 +1,110 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+  event_bindings: {}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {title: Sala, id: AMDBAN, data_key: ambiente_id}
+      - {width: 128, title: Qtd Pessoas_real, id: OSWVHC, data_key: qtd_pessoas_real,
+        expand: false}
+      - {title: Temperatura Critico, id: VTSBNO, data_key: temperatura_critico}
+      - {title: Capacidade De_pessoas_ultrapassada, id: GKTHXG, data_key: capacidade_de_pessoas_ultrapassada}
+      - {title: Co2 Critico, id: GFIVBY, data_key: co2_critico}
+      - {title: Precisa Limpeza, id: PAYDAS, data_key: precisa_limpeza}
+      - {title: Precisa Manutencao, id: GMOJRT, data_key: precisa_manutencao}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_1
+    layout_properties: {grid_position: 'XEOJOB,YDMTUJ'}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: homepageAdm.dev_room.RowTemplate2}
+      name: repeating_panel_1
+      layout_properties: {}
+      event_bindings: {}
+    event_bindings: {}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  components:
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Sair, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: link_sair
+    layout_properties: {}
+    event_bindings: {click: link_sair_click}
+- type: ColumnPanel
+  properties: {role: card, col_widths: '{}'}
+  name: card_1
+  layout_properties: {slot: left-nav}
+  components:
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Visão Geral, font_size: null, wrap_on: mobile, font: '',
+      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: link_visao_geral
+    layout_properties: {grid_position: 'SNSHDZ,VNQGXD'}
+    event_bindings: {click: link_visao_geral_click}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Usuários, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: link_usuarios
+    layout_properties: {grid_position: 'SFAXGB,VYIRHU'}
+    event_bindings: {}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Limpeza, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: link_3
+    layout_properties: {grid_position: 'GKRORK,SARWIO'}
+    event_bindings: {}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Configurações, font_size: null, wrap_on: mobile, font: '',
+      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: link_4
+    layout_properties: {grid_position: 'KULHUR,ZEQXVJ'}
+    event_bindings: {}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Sala de Controle, font_size: null, wrap_on: mobile, font: '',
+      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: true,
+      icon: ''}
+    name: link_5
+    layout_properties: {grid_position: 'DQRIZY,UQHPUI'}
+    event_bindings: {}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Centro de Tecnologia - Bloco H, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_1
+  layout_properties: {slot: title}

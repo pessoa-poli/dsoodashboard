@@ -1,0 +1,101 @@
+container:
+  type: ColumnPanel
+  event_bindings: {}
+  properties: {col_widths: '{}'}
+components:
+- type: ColumnPanel
+  properties: {role: card, col_widths: '{"CTIMFQ":10,"CTLJCJ":50}'}
+  name: card_1
+  layout_properties: {grid_position: 'ZIBKXG,IAJDGT'}
+  event_bindings: {}
+  components:
+  - type: Image
+    properties: {role: null, vertical_align: center, height: 108, tooltip: '', border: '',
+      foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: large,
+      source: _/theme/ufrj-logo.jpg, spacing_below: none, background: '', horizontal_align: center}
+    name: image_1
+    layout_properties: {grid_position: 'GSNOZO,CTIMFQ', full_width_row: false}
+    event_bindings: {}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Sala H-111, font_size: 18, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_5
+    layout_properties: {grid_position: 'GSNOZO,CTLJCJ EDLFAF,SKKJFQ ZHAPEY,CCJSTB'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Professor Cláudio Esperança, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: responsavel_label
+    layout_properties: {grid_position: 'GSNOZO,CTLJCJ EDLFAF,SKKJFQ MZVXSZ,FTEBVC'}
+    event_bindings: {}
+    data_bindings:
+    - {property: text, code: self.responsavel}
+  - type: FlowPanel
+    properties: {}
+    name: flow_panel_1
+    layout_properties: {grid_position: 'GSNOZO,CTLJCJ EDLFAF,PDJICL PNABOH,ZZPTXY'}
+    components:
+    - type: Image
+      properties: {role: null, vertical_align: center, height: 24, tooltip: '', border: '',
+        foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: medium,
+        source: _/theme/clock.png, spacing_below: small, background: '', horizontal_align: center}
+      name: image_2
+      layout_properties: {grid_position: 'GSNOZO,CTLJCJ EDLFAF,PDJICL FJFZQS,XMYJOD',
+        width: 43}
+      event_bindings: {}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: '16:00 às 17:00', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_1
+      layout_properties: {grid_position: 'GSNOZO,CTLJCJ EDLFAF,PDJICL FJFZQS,HNDSNF'}
+      event_bindings: {}
+  - type: FlowPanel
+    properties: {}
+    name: flow_panel_2
+    layout_properties: {grid_position: 'GSNOZO,CTLJCJ EDLFAF,PDJICL ZVSPJK,QFBIYN'}
+    components:
+    - type: Image
+      properties: {role: null, vertical_align: center, height: 27, tooltip: '', border: '',
+        foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: medium,
+        source: _/theme/co2-cloud-gray.png, spacing_below: small, background: '',
+        horizontal_align: center}
+      name: image_3
+      layout_properties: {grid_position: 'GSNOZO,CTLJCJ EDLFAF,PDJICL OEKTMA,DYNHYZ',
+        width: 45}
+      event_bindings: {}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 50%, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: co2_label
+      layout_properties: {grid_position: 'GSNOZO,CTLJCJ EDLFAF,PDJICL OEKTMA,YZXKAR'}
+      event_bindings: {}
+  - type: FlowPanel
+    properties: {}
+    name: flow_panel_3
+    layout_properties: {grid_position: 'GSNOZO,CTLJCJ EDLFAF,PDJICL DVGIKT,ZQKJDF'}
+    components:
+    - type: Image
+      properties: {role: null, vertical_align: center, height: 26, tooltip: '', border: '',
+        foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+        source: _/theme/users-group-gray.png, spacing_below: small, background: '',
+        horizontal_align: center}
+      name: image_4
+      layout_properties: {grid_position: 'GSNOZO,CTLJCJ EDLFAF,PDJICL CIXHUW,JWSRNN',
+        width: 46}
+      event_bindings: {}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 16/30 Usuários, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: numero_pessoa_label
+      layout_properties: {grid_position: 'GSNOZO,CTLJCJ EDLFAF,PDJICL CIXHUW,PFSBKD'}
+      event_bindings: {}
+is_package: true

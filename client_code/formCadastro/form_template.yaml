@@ -1,0 +1,154 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+  event_bindings: {}
+components:
+- type: ColumnPanel
+  properties: {role: card, col_widths: '{}'}
+  name: card_3
+  layout_properties: {grid_position: 'KOQZJN,HFLTXN'}
+  components:
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_1
+    layout_properties: {grid_position: 'HYFGYN,MBFTKL'}
+    components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Cadastre-se, font_size: 24, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_1
+      layout_properties: {grid_position: 'PXIWFR,CPXPBH'}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: gray,
+        visible: true, text: 'Para dar início ao seu cadastro, você deve preencher
+          estes dados. ', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: label_2
+      layout_properties: {grid_position: 'PNOSZT,OOYIVR'}
+      event_bindings: {}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: gray,
+        visible: true, text: 'Após este passo, um administrador existente deverá aprovar
+          o seu usuário.', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: label_11
+      layout_properties: {grid_position: 'CUERJR,XVVJMO'}
+      event_bindings: {}
+    - type: Label
+      properties: {role: formlabel, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Nome Completo*, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_3
+      layout_properties: {grid_position: 'ORDMBE,GGDEFO'}
+      event_bindings: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_nomecompleto
+      layout_properties: {grid_position: 'HAWWDE,EHXYEW'}
+    - type: Label
+      properties: {role: formlabel, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: CPF*, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_4
+      layout_properties: {grid_position: 'ZUIZNS,SFDJCW'}
+      event_bindings: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_cpf
+      layout_properties: {grid_position: 'YATJVS,RXEMGI'}
+    - type: Label
+      properties: {role: formlabel, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Papel Requisitado*, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_5
+      layout_properties: {grid_position: 'QWHHIO,FYADJO'}
+      event_bindings: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_papelrequisitado
+      layout_properties: {grid_position: 'PNBXSC,QANPDL'}
+      event_bindings: {}
+    - type: Label
+      properties: {role: formlabel, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: E-mail*, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_6
+      layout_properties: {grid_position: 'NFDFND,PIEUTE'}
+    - type: TextBox
+      properties: {}
+      name: text_box_email
+      layout_properties: {grid_position: 'SOEZYZ,NEIGGK'}
+      event_bindings: {}
+    - type: Label
+      properties: {role: formlabel, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Senha*, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_7
+      layout_properties: {grid_position: 'TRKJYP,NJWFTB'}
+    - type: TextBox
+      properties: {}
+      name: text_box_senha
+      layout_properties: {grid_position: 'IFTHIN,VCYAZB'}
+      event_bindings: {}
+    - type: Label
+      properties: {role: formlabel, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Confirmar a senha*, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_8
+      layout_properties: {grid_position: 'MLMROU,JMUGLP'}
+    - type: TextBox
+      properties: {}
+      name: text_box_confirmasenha
+      layout_properties: {grid_position: 'DVWAPY,NYMMCO'}
+      event_bindings: {}
+    - type: RadioButton
+      properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+        enabled: true, foreground: blue, value: '', visible: true, text: Concordo com os termos e condições.,
+        font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
+        background: '', bold: false, group_name: radioGroup1, underline: false}
+      name: radio_button_termosecondicoes
+      layout_properties: {grid_position: 'PVIAWS,BJKITY'}
+      event_bindings: {}
+    - type: Button
+      properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Criar conta, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: button_criarconta
+      layout_properties: {grid_position: 'HEVLWX,ALMTNG', full_width_row: false}
+    - type: Button
+      properties: {role: secondary-color, align: full, tooltip: '', border: '', enabled: true,
+        foreground: black, visible: true, text: cancelar, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: button_cancelar
+      layout_properties: {grid_position: 'MKHVQP,KWHODS'}
+      event_bindings: {}
+    - type: Label
+      properties: {role: formlabel, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: ou, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_10
+      layout_properties: {grid_position: 'NPFECT,EKFMAG'}
+      event_bindings: {}
+    - type: Button
+      properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: cadastre-se com Google, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: 'fa:google'}
+      name: button_2
+      layout_properties: {grid_position: 'ZJRXGW,KDONYW'}
+      event_bindings: {}
+    event_bindings: {}
+is_package: true

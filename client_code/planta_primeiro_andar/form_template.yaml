@@ -1,0 +1,89 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+  event_bindings: {}
+components:
+- type: XYPanel
+  properties: {role: scrollable, width: 758, align: center, height: 181, tooltip: '',
+    border: '', foreground: '', visible: true, spacing_above: small, spacing_below: small,
+    background: ''}
+  name: xy_panel_primeiroandar
+  layout_properties: {grid_position: 'ZXJTIE,OSJENR'}
+  components:
+  - type: Image
+    properties: {role: null, vertical_align: center, height: 207, tooltip: '', border: '',
+      foreground: '', visible: true, display_mode: fill_width, spacing_above: small,
+      source: _/theme/1_Andar_8000pixels.PNG, spacing_below: small, background: '',
+      horizontal_align: center}
+    name: image_1
+    layout_properties: {grid_position: 'VXNHYZ,WEDETB', x: 10, y: 0, width: 679}
+    event_bindings: {}
+- type: Image
+  properties: {role: null, vertical_align: center, height: '20', tooltip: '', border: '',
+    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+    source: _/theme/red-circle.png, spacing_below: small, background: '', horizontal_align: center}
+  name: image_redcircle
+  layout_properties: {x: 326.75, y: 50, width: 116, grid_position: 'QXVQOM,FALYFY'}
+  event_bindings: {}
+- type: Image
+  properties: {role: null, vertical_align: center, height: '20', tooltip: '', border: '',
+    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+    source: _/theme/yellow-circle.png, spacing_below: small, background: '', horizontal_align: center}
+  name: image_yellowcircle
+  layout_properties:
+    col_widths: {}
+    grid_position: PYRQYV,NFZSTC
+  event_bindings: {}
+- type: Image
+  properties: {role: null, vertical_align: center, height: '20', tooltip: '', border: '',
+    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+    source: _/theme/green-circle.png, spacing_below: small, background: '', horizontal_align: center}
+  name: image_greencircle
+  layout_properties:
+    col_widths: {}
+    grid_position: DZMUJK,OKJEIV
+  event_bindings: {}
+- type: Image
+  properties: {role: null, vertical_align: center, height: '20', tooltip: '', border: '',
+    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+    source: _/theme/settings.png, spacing_below: small, background: '', horizontal_align: center}
+  name: image_settings
+  layout_properties: {grid_position: 'UIKOWJ,PDDIKG'}
+  event_bindings: {}
+- type: Image
+  properties: {role: null, vertical_align: center, height: '20', tooltip: '', border: '',
+    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+    source: _/theme/broom.png, spacing_below: small, background: '', horizontal_align: center}
+  name: image_broom
+  layout_properties:
+    col_widths: {}
+    grid_position: VCEUAQ,JNLCMW
+  event_bindings: {}
+- type: Image
+  properties: {role: null, vertical_align: center, height: '20', tooltip: '', border: '',
+    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+    source: _/theme/ok.png, spacing_below: small, background: '', horizontal_align: center}
+  name: image_ok
+  layout_properties:
+    col_widths: {}
+    grid_position: NDLWBK,TUETBP
+  event_bindings: {}
+- type: Image
+  properties: {role: null, vertical_align: center, height: '20', tooltip: '', border: '',
+    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+    source: _/theme/co2-critico.png, spacing_below: small, background: '', horizontal_align: center}
+  name: image_co2critico
+  layout_properties:
+    col_widths: {}
+    grid_position: XVPOXG,PKCJEZ
+  event_bindings: {}
+- type: Image
+  properties: {role: null, vertical_align: center, height: '20', tooltip: '', border: '',
+    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+    source: _/theme/overcapacity.png, spacing_below: small, background: '', horizontal_align: center}
+  name: image_overcapacity
+  layout_properties:
+    col_widths: {}
+    grid_position: YJYQJP,BHXQAA
+  event_bindings: {}
+is_package: true

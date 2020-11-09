@@ -1,0 +1,62 @@
+container:
+  type: DataRowPanel
+  event_bindings: {}
+components:
+- type: CheckBox
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+    spacing_below: small, italic: false, background: '', bold: false, checked: false,
+    underline: false}
+  name: check_box_precisa_manutencao
+  layout_properties: {column: GMOJRT}
+  event_bindings: {}
+  data_bindings:
+  - {property: checked, code: 'self.item[''precisa_manutencao'']', writeback: true}
+- type: CheckBox
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+    spacing_below: small, italic: false, background: '', bold: false, checked: false,
+    underline: false}
+  name: check_box_precisa_limpeza
+  layout_properties: {column: PAYDAS}
+  event_bindings: {}
+  data_bindings:
+  - {property: checked, code: 'self.item[''precisa_limpeza'']', writeback: true}
+- type: CheckBox
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+    spacing_below: small, italic: false, background: '', bold: false, checked: false,
+    underline: false}
+  name: check_box_co2_critico
+  layout_properties: {column: GFIVBY}
+  event_bindings: {}
+  data_bindings:
+  - {property: checked, code: 'self.item[''co2_critico'']', writeback: true}
+- type: CheckBox
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+    spacing_below: small, italic: false, background: '', bold: false, checked: false,
+    underline: false}
+  name: check_box_capacidade_ultrapassada
+  layout_properties: {column: GKTHXG}
+  event_bindings: {}
+  data_bindings:
+  - {property: checked, code: 'self.item[''capacidade_de_pessoas_ultrapassada'']',
+    writeback: true}
+- type: CheckBox
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+    spacing_below: small, italic: false, background: '', bold: false, checked: false,
+    underline: false}
+  name: check_box_temp_critico
+  layout_properties: {column: VTSBNO}
+  event_bindings: {}
+  data_bindings:
+  - {property: checked, code: 'self.item[''temperatura_critico'']', writeback: true}
+- type: DropDown
+  properties: {}
+  name: drop_down_1
+  layout_properties: {column: OSWVHC}
+  data_bindings:
+  - {property: selected_value, code: 'self.item[''qtd_pessoas_real'']', writeback: true}
+is_package: true

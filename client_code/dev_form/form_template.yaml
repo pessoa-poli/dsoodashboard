@@ -1,0 +1,210 @@
+container:
+  type: ColumnPanel
+  event_bindings: {}
+  properties: {col_widths: '{}'}
+components:
+- type: Button
+  properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: 'buscar_responsavel
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: buscar_responsavel
+  layout_properties:
+    col_widths: {}
+    grid_position: GSBKMC,OIAWGI
+  event_bindings: {click: buscar_responsavel_click}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: buscar_responsavel, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_buscar_responsavel
+  layout_properties:
+    col_widths: {}
+    grid_position: QPCSWU,FXCMKJ
+  event_bindings: {}
+- type: Button
+  properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: 'get_total_salas
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: button_gettotalsalas
+  layout_properties: {grid_position: 'IGLQAR,EAGLEN'}
+  event_bindings: {click: call_back_click}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Retorno botão get_total salas, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_gettotalsalas
+  layout_properties: {grid_position: 'CWXJZM,IENVDU'}
+  event_bindings: {}
+- type: Button
+  properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: 'get_lista_salas
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: button_getlistasalas
+  layout_properties:
+    col_widths: {}
+    grid_position: JHCKCV,YAQLAG
+  event_bindings: {click: button_getlistasalas_click}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Retorno botão get_total salas, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_button_getlistasalas
+  layout_properties:
+    col_widths: {}
+    grid_position: PSXUWQ,QKZCCQ
+- type: Button
+  properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: 'get_ultimas_medicoes
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: get_ultimas_medicoes
+  layout_properties:
+    col_widths: {}
+    grid_position: SMQHEJ,BLMFNC
+  event_bindings: {}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Retorno botão get_total salas, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_get_ultimas_medicoes
+  layout_properties:
+    col_widths: {}
+    grid_position: YFQNPW,AMZCEG
+  event_bindings: {}
+- type: Button
+  properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: 'get_count_salas_baixo_risco
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: get_count_salas_baixo_risco
+  layout_properties:
+    col_widths: {}
+    grid_position: BCVZFP,ZFJBEE
+  event_bindings: {}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Retorno botão get_total salas, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_get_count_salas_baixo_risco
+  layout_properties:
+    col_widths: {}
+    grid_position: SLHOZB,YDILUL
+  event_bindings: {}
+- type: Button
+  properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: 'get_count_salas_medio_risco
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: get_count_salas_medio_risco
+  layout_properties:
+    col_widths: {}
+    grid_position: NGDETU,XJAJNR
+  event_bindings: {}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Retorno botão get_total salas, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_get_count_salas_medio_risco
+  layout_properties:
+    col_widths: {}
+    grid_position: IJBCOW,MYMTDM
+  event_bindings: {}
+- type: Button
+  properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: 'get_count_salas_alto_risco
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: get_count_salas_alto_risco
+  layout_properties:
+    col_widths: {}
+    grid_position: FWFVTA,PZIXOI
+  event_bindings: {}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Retorno botão get_total salas, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_get_count_salas_alto_risco
+  layout_properties:
+    col_widths: {}
+    grid_position: IBJAXL,SNPSQL
+  event_bindings: {}
+- type: Button
+  properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: get_count_usuarios_presentes, font_size: null,
+    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false, icon: ''}
+  name: get_count_usuarios_presentes
+  layout_properties:
+    col_widths: {}
+    grid_position: BEIZYG,LKJEEP
+  event_bindings: {}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Retorno botão get_total salas, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_get_count_usuarios_presentes
+  layout_properties:
+    col_widths: {}
+    grid_position: PXBBIK,CAJDKN
+  event_bindings: {}
+- type: Button
+  properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: 'get_count_salas_disponiveis_pra_uso
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: get_count_salas_disponiveis_pra_uso
+  layout_properties:
+    col_widths: {}
+    grid_position: NLITNX,ZXXZIP
+  event_bindings: {}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Retorno botão get_total salas, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_get_count_salas_disponiveis_pra_uso
+  layout_properties:
+    col_widths: {}
+    grid_position: JNZKCF,XGWZAY
+  event_bindings: {}
+- type: Button
+  properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: 'get_sala_pelo_id
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: get_sala_pelo_id
+  layout_properties:
+    col_widths: {}
+    grid_position: WOONER,METGEX
+  event_bindings: {}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Retorno botão get_total salas, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_get_sala_pelo_id
+  layout_properties:
+    col_widths: {}
+    grid_position: AKJJIQ,YHJLEF
+  event_bindings: {}
+is_package: true
