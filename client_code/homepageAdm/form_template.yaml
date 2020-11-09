@@ -222,7 +222,7 @@ components:
       border: '', foreground: '', visible: true, spacing_above: small, spacing_below: small,
       background: ''}
     name: xy_panel_1
-    layout_properties: {grid_position: 'TMETYA,QQZCNC'}
+    layout_properties: {grid_position: 'TMETYA,LRNLZS'}
     components:
     - type: Image
       properties: {role: null, vertical_align: center, height: 200, tooltip: '', border: '',

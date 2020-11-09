@@ -49,9 +49,29 @@ class homepageAdm(homepageAdmTemplate):
     self.h111_ok_image.visible = False
 
   def setup_FloorPlan_Markers(self, room=None, **event_args):
+    markers_list = self.xy_panel_1.get_components()
     sala = anvil.server.call('get_sala_pelo_nome', nome_sala=room)
     print(sala)
     critico = False
+    
+    for component in markers_list:
+      if component.name == f'{room}_ok_image':
+        pass
+      if component.name == f'{room}_broom_image':
+        pass
+      if component.name == f'{room}_co2_image':
+        pass
+      if component.name == f'{room}_maintenance_image':
+        pass
+      if component.name == f'{room}_overcapacity_image':
+        pass
+      if component.name == f'{room}_green_marker':
+        pass
+      if component.name == f'{room}_yellow_marker':
+        pass
+      if component.name == f'{room}_red_marker':
+        pass
+    
     if sala['co2'] >= 700:
       self.h111_co2_image.visible = True
       critico = True
