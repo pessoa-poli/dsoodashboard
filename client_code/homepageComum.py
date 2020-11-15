@@ -11,9 +11,6 @@ class homepageComum(homepageComumTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.user = ""
-    self.init_components(**properties)
-    
-    # Any code you write here will run when the form opens.    
     self.dropdown_andar.items = ["1º Andar", "2º Andar", "3º Andar"]
     self.dropdown_andar.selected_value = self.dropdown_andar.items[0]
     self.dropdown_bloco.items = ["Bloco A","Bloco B","Bloco C","Bloco D","Bloco E","Bloco F","Bloco G","Bloco H",]
@@ -21,6 +18,11 @@ class homepageComum(homepageComumTemplate):
     self.hide_markers()
     self.setup_FloorPlan_Markers("h111")
     self.dic_login = {'email':"", "senha":"", "lembrar_de_mim":False}
+    
+    self.init_components(**properties)
+    
+    # Any code you write here will run when the form opens.    
+    
     
   def h111_marker_mouse_down(self, x, y, button, **event_args):
     responsavel = anvil.server.call('buscar_responsavel', meuid='h111')    
