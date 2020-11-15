@@ -5,6 +5,10 @@
 /* Stop panel-cols cutting off drop shadows */
 
 /*My code below*/
+.anvil-role-horizontal-repeater {
+    display: flex;
+  
+}
 .anvil-role-roommarkersflowpanel {
   width: 67px;
   height: 67px;

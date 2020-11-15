@@ -14,7 +14,7 @@ components:
     foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: large,
     icon_align: left, spacing_below: none, italic: false, background: '', bold: false,
     underline: false, icon: 'fa:pencil'}
-  name: primary_color_2
+  name: button_editar
   layout_properties: {column: VENLJE}
   event_bindings: {}
 - type: Button
@@ -22,14 +22,28 @@ components:
     foreground: '', visible: true, text: inativo, font_size: null, font: '', spacing_above: small,
     icon_align: top, spacing_below: small, italic: false, background: '', bold: false,
     underline: false, icon: _/theme/controls-red.png}
-  name: button_status
+  name: button_statusconta
   layout_properties: {column: ZCLJWE}
   event_bindings: {click: primary_color_3_click}
 - type: Label
-  properties: {}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: '', spacing_above: large, icon_align: left, spacing_below: none,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
   name: label_nome
   layout_properties: {column: DADNMB}
   event_bindings: {}
   data_bindings:
   - {property: text, code: 'self.item[''nome'']'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: '', spacing_above: large, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: label_papel
+  layout_properties: {column: UHDXTG}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: '', spacing_above: large, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: label_email
+  layout_properties: {column: SHZCPZ}
 is_package: true

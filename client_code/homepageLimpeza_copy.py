@@ -1,12 +1,14 @@
-from ._anvil_designer import homepageLimpezaTemplate
+from ._anvil_designer import homepageLimpeza_copyTemplate
 from anvil import *
 import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+from .homepageAdm import homepageAdm
+from .telaUsuarios import telaUsuarios
 
-class homepageLimpeza(homepageLimpezaTemplate):
+class homepageLimpeza_copy(homepageLimpeza_copyTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.dropdown_andar.items = ["1º Andar", "2º Andar", "3º Andar"]

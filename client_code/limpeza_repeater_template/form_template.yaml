@@ -17,6 +17,8 @@ components:
     name: label_1
     layout_properties: {grid_position: 'USIROH,JVNETW'}
     event_bindings: {}
+    data_bindings:
+    - {property: text, code: 'self.item[0][''nome'']'}
   - type: FlowPanel
     properties: {}
     name: flow_panel_1
@@ -38,24 +40,33 @@ components:
       name: label_2
       layout_properties: {grid_position: 'SNQLMP,FAOINV'}
       event_bindings: {}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: red,
+      visible: true, text: Sala marcada para limpeza., font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_salamarcadaparalimpeza
+    layout_properties: {grid_position: 'OKCMDH,CUQAHZ'}
   - type: Button
     properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Marcar como limpa, font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
-    name: button_marcar_limpa_1
+    name: button_marcar_limpa
     layout_properties: {grid_position: 'PHYFIO,IFELZR', full_width_row: false, row_background: ''}
-    event_bindings: {}
+    event_bindings: {click: button_marcar_limpa_click}
   - type: Button
     properties: {role: secondary-color, align: full, tooltip: '', border: '', enabled: true,
       foreground: black, visible: true, text: Necessita Limpeza, font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
-    name: button_necessita_limpeza_1
+    name: button_necessita_limpeza
     layout_properties: {grid_position: 'BCOXHK,SNPXBI'}
     event_bindings: {}
   - type: FlowPanel
-    properties: {}
+    properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
+      foreground: '', visible: false, spacing_above: small, spacing_below: small,
+      background: ''}
     name: flow_panel_2
     layout_properties: {grid_position: 'NLWVLR,QZMGHW'}
     components:
@@ -75,204 +86,28 @@ components:
       layout_properties: {grid_position: 'FQVAUQ,ZPJZFN'}
       event_bindings: {}
     event_bindings: {}
-  - type: Button
-    properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Manutenção feita, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: button_manutencao_feita_1
-    layout_properties: {grid_position: 'EVSCPD,FLMOUH'}
-    event_bindings: {}
-  - type: Button
-    properties: {role: secondary-color, align: full, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: Necessita manutenção, font_size: null,
-      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: button_necessita_manutencao_1
-    layout_properties: {grid_position: 'BOWSWN,NPFXUI'}
-    event_bindings: {}
-- type: ColumnPanel
-  properties: {role: card, col_widths: '{}'}
-  name: card_1_copy
-  layout_properties:
-    col_widths: {}
-    grid_position: LPGTGG,PGRJMS
-  components:
   - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Sala H-111, font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_1_copy
-    layout_properties: {grid_position: 'USIROH,JVNETW'}
-    event_bindings: {}
-  - type: FlowPanel
-    properties: {}
-    name: flow_panel_1_copy
-    layout_properties: {grid_position: 'SNQLMP,KXEXDQ'}
-    event_bindings: {}
-    components:
-    - type: Image
-      properties: {role: null, vertical_align: center, height: 24, tooltip: '', border: '',
-        foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: medium,
-        source: _/theme/broom-gray.png, spacing_below: small, background: '', horizontal_align: center}
-      name: image_1_copy
-      layout_properties: {grid_position: 'SNQLMP,XQSPVA', width: 34}
-      event_bindings: {}
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: Limpeza, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: label_2_copy
-      layout_properties: {grid_position: 'SNQLMP,FAOINV'}
-      event_bindings: {}
-  - type: Button
-    properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Marcar como limpa, font_size: null, font: '',
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: red,
+      visible: true, text: Sala marcada para manutenção., font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
-    name: button_marcar_limpa_1_copy
-    layout_properties: {grid_position: 'PHYFIO,IFELZR', full_width_row: false, row_background: ''}
+    name: label_salamarcadaparamanutencao
+    layout_properties: {grid_position: 'FVVTXN,PSKIVF'}
+  - type: Button
+    properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: false, text: Manutenção feita, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: button_manutencao_feita
+    layout_properties: {grid_position: 'WHQUBE,MFDFQT'}
     event_bindings: {}
   - type: Button
     properties: {role: secondary-color, align: full, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: Necessita Limpeza, font_size: null,
+      foreground: black, visible: false, text: Necessita manutenção, font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
-    name: button_necessita_limpeza_1_copy
-    layout_properties: {grid_position: 'BCOXHK,SNPXBI'}
+    name: button_necessita_manutencao
+    layout_properties: {grid_position: 'UTCBCU,LSZBYJ'}
     event_bindings: {}
-  - type: FlowPanel
-    properties: {}
-    name: flow_panel_2_copy
-    layout_properties: {grid_position: 'NLWVLR,QZMGHW'}
-    components:
-    - type: Image
-      properties: {role: null, vertical_align: center, height: '24', tooltip: '',
-        border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: medium,
-        source: _/theme/settings-gray.png, spacing_below: small, background: '', horizontal_align: center}
-      name: image_2_copy
-      layout_properties: {grid_position: 'NLWVLR,XJAIMH', width: 33}
-      event_bindings: {}
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: Manutenção, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: label_3_copy
-      layout_properties: {grid_position: 'FQVAUQ,ZPJZFN'}
-      event_bindings: {}
-    event_bindings: {}
-  - type: Button
-    properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Manutenção feita, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: button_manutencao_feita_1_copy
-    layout_properties: {grid_position: 'EVSCPD,FLMOUH'}
-    event_bindings: {}
-  - type: Button
-    properties: {role: secondary-color, align: full, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: Necessita manutenção, font_size: null,
-      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: button_necessita_manutencao_1_copy
-    layout_properties: {grid_position: 'BOWSWN,NPFXUI'}
-    event_bindings: {}
-- type: ColumnPanel
-  properties: {role: card, col_widths: '{}'}
-  name: card_1_copy_2
-  layout_properties:
-    col_widths: {}
-    grid_position: LPGTGG,HZLFHU
-  components:
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Sala H-111, font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_1_copy_2
-    layout_properties: {grid_position: 'USIROH,JVNETW'}
-    event_bindings: {}
-  - type: FlowPanel
-    properties: {}
-    name: flow_panel_1_copy_2
-    layout_properties: {grid_position: 'SNQLMP,KXEXDQ'}
-    event_bindings: {}
-    components:
-    - type: Image
-      properties: {role: null, vertical_align: center, height: 24, tooltip: '', border: '',
-        foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: medium,
-        source: _/theme/broom-gray.png, spacing_below: small, background: '', horizontal_align: center}
-      name: image_1_copy_2
-      layout_properties: {grid_position: 'SNQLMP,XQSPVA', width: 34}
-      event_bindings: {}
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: Limpeza, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: label_2_copy_2
-      layout_properties: {grid_position: 'SNQLMP,FAOINV'}
-      event_bindings: {}
-  - type: Button
-    properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Marcar como limpa, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: button_marcar_limpa_1_copy_2
-    layout_properties: {grid_position: 'PHYFIO,IFELZR', full_width_row: false, row_background: ''}
-    event_bindings: {}
-  - type: Button
-    properties: {role: secondary-color, align: full, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: Necessita Limpeza, font_size: null,
-      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: button_necessita_limpeza_1_copy_2
-    layout_properties: {grid_position: 'BCOXHK,SNPXBI'}
-    event_bindings: {}
-  - type: FlowPanel
-    properties: {}
-    name: flow_panel_2_copy_2
-    layout_properties: {grid_position: 'NLWVLR,QZMGHW'}
-    components:
-    - type: Image
-      properties: {role: null, vertical_align: center, height: '24', tooltip: '',
-        border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: medium,
-        source: _/theme/settings-gray.png, spacing_below: small, background: '', horizontal_align: center}
-      name: image_2_copy_2
-      layout_properties: {grid_position: 'NLWVLR,XJAIMH', width: 33}
-      event_bindings: {}
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: Manutenção, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: label_3_copy_2
-      layout_properties: {grid_position: 'FQVAUQ,ZPJZFN'}
-      event_bindings: {}
-    event_bindings: {}
-  - type: Button
-    properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Manutenção feita, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: button_manutencao_feita_1_copy_2
-    layout_properties: {grid_position: 'EVSCPD,FLMOUH'}
-    event_bindings: {}
-  - type: Button
-    properties: {role: secondary-color, align: full, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: Necessita manutenção, font_size: null,
-      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: button_necessita_manutencao_1_copy_2
-    layout_properties: {grid_position: 'BOWSWN,NPFXUI'}
-    event_bindings: {}
-- type: Label
-  properties: {}
-  name: label_4
-  layout_properties: {grid_position: 'EAYJIR,RMCOAV'}
-  data_bindings:
-  - {property: text, code: self.item}
 is_package: true
+item_type: {table_id: null}

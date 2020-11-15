@@ -6,6 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from .homepageAdm.ambiente_popup import ambiente_popup
+from .loginLightbox import loginLightbox
 
 class homepageComum(homepageComumTemplate):
   def __init__(self, **properties):
@@ -31,13 +32,6 @@ class homepageComum(homepageComumTemplate):
                buttons=[],
                dismissible=True)
 
-  def button_login_click(self, **event_args):
-    self.user = anvil.users.login_with_form(show_signup_option=True, allow_remembered=True, allow_cancel=True)
-    if self.user['nivel_acesso']['nome'] == "administrador":
-      open_form('homepageAdm')
-    if self.user['nivel_acesso']['nome'] == "limpeza":
-      open_form('homepageLimpeza')
-      
   def hide_markers(self, **event_args):
     self.h111_co2_image.visible = False    
     self.h111_overcapacity_image.visible = False         
@@ -72,10 +66,14 @@ class homepageComum(homepageComumTemplate):
     if not critico:
       self.h111_ok_image.visible = True
 
-  def timer_1_tick(self, **event_args):
-    """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
-    count = anvil.server.call('get_total_salas')
-    pass
+
+  def link_login_click(self, **event_args):
+    alert(
+      content=loginLightbox(),
+      title="Faça seu login",
+      large=True,
+    )
+
 
 
 

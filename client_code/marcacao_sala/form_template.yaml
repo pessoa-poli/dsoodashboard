@@ -19,7 +19,7 @@ components:
     border: '', foreground: '', visible: true, spacing_above: small, spacing_below: small,
     background: ''}
   name: flow_panel_marker_pen
-  layout_properties: {grid_position: 'XIBEWO,LBEAVJ'}
+  layout_properties: {grid_position: 'XIBEWO,RDTDAY'}
   components:
   - type: Image
     properties: {role: null, vertical_align: center, height: '10', tooltip: '', border: '',
