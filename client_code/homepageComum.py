@@ -43,7 +43,7 @@ class homepageComum(homepageComumTemplate):
     self.h111_ok_image.visible = False
 
   def setup_FloorPlan_Markers(self, room, **event_args):
-    sala = anvil.server.call('get_sala_pelo_id', id_sala="h111")
+    sala = anvil.server.call('get_sala_pelo_nome', id_sala="H-111")
     critico = False
     if sala['co2_critico']:
       self.h111_co2_image.visible = True
