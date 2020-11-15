@@ -13,7 +13,7 @@ class homepageAdm(homepageAdmTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)    
     # Any code you write here will run when the form opens.
-    self.repeating_panel_warnings.items = ["H-111"]
+    self.repeating_panel_warnings.items = anvil.server.call('busca_crises')
     self.setupData()
     self.dropdown_andar.items = ["1º Andar", "2º Andar", "3º Andar"]
     self.dropdown_andar.selected_value = self.dropdown_andar.items[0]
@@ -60,42 +60,20 @@ class homepageAdm(homepageAdmTemplate):
     markerInfo['type'] = secondPartOfString[:secondUnderscore]
     return markerInfo
   
-  def setup_FloorPlan_Markers(self, room=None, **event_args):
-    markers_list = self.xy_panel_1.get_components()
-    sala = anvil.server.call('get_sala_pelo_nome', nome_sala=room)
-    print(sala)
-    critico = False
-          
-    if sala['co2'] >= 700:
-      self.h111_co2_image.visible = True
-      critico = True
-    else:
-      self.h111_co2_image.visible = False
-    if sala['capacidadeUltrapassada']:
-      self.h111_overcapacity_image.visible = True
-      critico = True
-    else:
-      self.h111_overcapacity_image.visible = False
-    if sala['necessitaManutencao']:      
-      self.h111_maintenance_image.visible = True
-      critico = True
-    else:
-      self.h111_maintenance_image.visible = False
-    if sala['necessitaLimpeza']:
-      self.h111_broom_image.visible = True
-      critico = True
-    else:
-      self.h111_broom_image.visible = False
-    if sala['nivel_risco']['risco'] == "verde":
+  def setup_FloorPlan_Markers(self, room, **event_args):
+    sala = anvil.server.call('get_sala_pelo_nome', nome_sala="H-111")     
+    self.h111_co2_image.visible = sala['co2'] > 1000
+    self.h111_overcapacity_image.visible = sala['capacidadeUltrapassada']         
+    self.h111_maintenance_image.visible = sala['necessitaManutencao']    
+    self.h111_broom_image.visible = sala['necessitaLimpeza']      
+    if sala['nivel_risco'] == "Baixo":
       self.h111_green_marker.visible = True
-    if sala['nivel_risco']['risco'] == "vermelho":
-      self.h111_red_marker.visible = True
-    if sala['nivel_risco']['risco'] == "amarelo":
-      self.h111_yellow_marker.visible = True
-    if not critico:
-      self.h111_ok_image.visible = True
-    else:
-      self.h111_ok_image.visible = False
+    if sala['nivel_risco'] == "Médio":
+      self.h111_yellow_marker.visible = True  
+    if sala['nivel_risco'] == "Elevado":
+      self.h111_red_marker.visible = True    
+    self.h111_ok_image.visible = not (sala['co2'] > 1000 or sala['capacidadeUltrapassada'] or sala['necessitaManutencao'] or sala['necessitaLimpeza'])
+
 
   def reload_dados(self, **event_args):
     self.setupData()

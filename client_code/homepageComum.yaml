@@ -184,7 +184,7 @@ components:
   name: label_3
   layout_properties: {slot: title}
 - type: Timer
-  properties: {interval: 1}
+  properties: {interval: 3}
   name: timer_1
   data_bindings: []
   event_bindings: {tick: timer_1_tick}

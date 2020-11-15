@@ -17,7 +17,7 @@ class homepageComum(homepageComumTemplate):
     self.dropdown_bloco.items = ["Bloco A","Bloco B","Bloco C","Bloco D","Bloco E","Bloco F","Bloco G","Bloco H",]
     self.dropdown_bloco.selected_value = self.dropdown_bloco.items[7]
     self.hide_markers()
-    self.setup_FloorPlan_Markers("h111")
+    self.setup_FloorPlan_Markers("H-111")
     self.dic_login = {'email':"", "senha":"", "lembrar_de_mim":False}
     
     self.init_components(**properties)
@@ -43,28 +43,18 @@ class homepageComum(homepageComumTemplate):
     self.h111_ok_image.visible = False
 
   def setup_FloorPlan_Markers(self, room, **event_args):
-    sala = anvil.server.call('get_sala_pelo_nome', id_sala="H-111")
-    critico = False
-    if sala['co2_critico']:
-      self.h111_co2_image.visible = True
-      critico = True
-    if sala['capacidade_de_pessoas_ultrapassada']:
-      self.h111_overcapacity_image.visible = True
-      critico = True
-    if sala['precisa_manutencao']:      
-      self.h111_maintenance_image.visible = True
-      critico = True
-    if sala['precisa_limpeza']:
-      self.h111_broom_image.visible = True
-      critico = True
-    if sala['nivel_risco']['risco'] == "verde":
-      self.h111_green_marker.visible = True      
-    if sala['nivel_risco']['risco'] == "vermelho":
-      self.h111_red_marker.visible = True      
-    if sala['nivel_risco']['risco'] == "amarelo":
-      self.h111_yellow_marker.visible = True    
-    if not critico:
-      self.h111_ok_image.visible = True
+    sala = anvil.server.call('get_sala_pelo_nome', nome_sala="H-111")     
+    self.h111_co2_image.visible = sala['co2'] > 1000
+    self.h111_overcapacity_image.visible = sala['capacidadeUltrapassada']         
+    self.h111_maintenance_image.visible = sala['necessitaManutencao']    
+    self.h111_broom_image.visible = sala['necessitaLimpeza']      
+    if sala['nivel_risco'] == "Baixo":
+      self.h111_green_marker.visible = True
+    if sala['nivel_risco'] == "Médio":
+      self.h111_yellow_marker.visible = True  
+    if sala['nivel_risco'] == "Elevado":
+      self.h111_red_marker.visible = True    
+    self.h111_ok_image.visible = not (sala['co2'] > 1000 or sala['capacidadeUltrapassada'] or sala['necessitaManutencao'] or sala['necessitaLimpeza'])
 
 
   def link_login_click(self, **event_args):
@@ -73,6 +63,12 @@ class homepageComum(homepageComumTemplate):
       title="Faça seu login",
       large=True,
     )
+
+  def timer_1_tick(self, **event_args):
+    with anvil.server.no_loading_indicator:
+      self.setup_FloorPlan_Markers("H-111")
+      self.refresh_data_bindings()
+
 
 
 
