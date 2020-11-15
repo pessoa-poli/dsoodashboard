@@ -58,11 +58,11 @@ components:
       layout_properties: {grid_position: 'IRXXBL,SMRKSX'}
       event_bindings: {}
   - type: XYPanel
-    properties: {role: scrollable, width: 653, align: center, height: '190', tooltip: '',
+    properties: {role: scrollable, width: 653, align: center, height: 640, tooltip: '',
       border: '', foreground: '', visible: true, spacing_above: small, spacing_below: small,
       background: ''}
     name: xy_panel_1
-    layout_properties: {grid_position: 'FRYOZG,FSJQRG'}
+    layout_properties: {grid_position: 'ICRJOB,OGSWMO'}
     components:
     - type: Image
       properties: {role: null, vertical_align: center, height: 200, tooltip: '', border: '',
