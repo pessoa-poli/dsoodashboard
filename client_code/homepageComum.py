@@ -59,12 +59,12 @@ class homepageComum(homepageComumTemplate):
 
 
   def link_login_click(self, **event_args):
-    alert(
+    login = alert(
       content=loginLightbox(),
       title="Faça seu login",
       large=True,
       dismissible=True,
-    )
+    )   
 
   def timer_1_tick(self, **event_args):
     self.label_atualizacaodata.text = f"Última atualidação: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"

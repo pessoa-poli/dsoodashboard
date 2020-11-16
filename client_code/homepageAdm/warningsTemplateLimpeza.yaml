@@ -92,3 +92,4 @@ container:
     wrap_on: mobile, col_spacing: small, spacing_above: small, col_widths: '{}', spacing_below: small,
     background: ''}
   event_bindings: {}
+item_type: {table_id: null}

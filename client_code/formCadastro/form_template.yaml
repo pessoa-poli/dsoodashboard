@@ -110,6 +110,13 @@ components:
       name: text_box_confirmasenha
       layout_properties: {grid_position: 'DVWAPY,NYMMCO'}
       event_bindings: {}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: red,
+        visible: false, text: Sua senha e confirmação não batem!, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_senhas_diferentes
+      layout_properties: {grid_position: 'FGAJES,PHGBYG'}
     - type: Button
       properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: Criar conta, font_size: null, font: '',

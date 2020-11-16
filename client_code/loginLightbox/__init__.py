@@ -6,6 +6,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ..formCadastro import formCadastro
+import time
 
 class loginLightbox(loginLightboxTemplate):
   def __init__(self, **properties):    
@@ -23,13 +24,15 @@ class loginLightbox(loginLightboxTemplate):
       self.raise_event('x-close-alert')
       open_form('homepageLimpeza')
       n = Notification("Bem vindo ao Dashboard!")
-      n.show()
-    if not found_me:
+      n.show()      
+    if not found_me:     
       n = Notification("Usuario ou senha incorretos")
-      n.show()
+      n.show()      
+      
     
 
   def link_cadastrese_click(self, **event_args):
+    self.raise_event('x-close-alert')
     alert(content=formCadastro(), buttons=[],dismissible=True,large=True,title="Faça seu cadastro.")
     
 

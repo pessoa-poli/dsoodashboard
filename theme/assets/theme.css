@@ -5,6 +5,7 @@
 /* Stop panel-cols cutting off drop shadows */
 
 /*My code below*/
+[data-notify] { z-index: 9999 !important; }
 .anvil-role-horizontal-repeater {
     display: flex;
   

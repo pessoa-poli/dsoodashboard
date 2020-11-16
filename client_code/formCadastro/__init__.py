@@ -10,7 +10,7 @@ class formCadastro(formCadastroTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.drop_down_perfilusuario.items = ["Administrador", "Funcionário"]
+    self.drop_down_perfilusuario.items = [("Administrador", 1), ("Funcionário",2)]
     # Any code you write here will run when the form opens.
 
   def button_cancelar_click(self, **event_args):
@@ -34,6 +34,9 @@ class formCadastro(formCadastroTemplate):
       n.show()
       open_form('homepageComum')
     
-    
+    def checaConfSenha(self):
+      senhas_iguais = self._senha.text == self.text_box_confirmasenha.text
+      if not senhas_iguais:
+        self.label_
 
 
