@@ -13,7 +13,8 @@ class telaUsuarios(telaUsuariosTemplate):
     # Set Form properties and Data Bindings.
     self.user = ""
     self.init_components(**properties)
-    self.repeating_panel_usuarios.items = [{'nome':'Marcelo'},{'nome':'Marcelo'},{'nome':'Natália'},{'nome':'Jonas'},{'nome':'Maria'},]
+    self.repeating_panel_usuarios.items = anvil.server.call('busca_usuarios')
+    
     # Any code you write here will run when the form opens. 
 
   def visao_geral_link_click(self, **event_args):

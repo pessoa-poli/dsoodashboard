@@ -10,7 +10,7 @@ from datetime import datetime
 class homepageLimpeza(homepageLimpezaTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    logou = anvil.server.call('login', 'teste@teste.com', 'testesenha', lembrardemim=False)
+    #logou = anvil.server.call('login', 'teste@teste.com', 'testesenha', lembrardemim=False)
     self.usuario_logado = anvil.server.call('return_current_user')
     self.dropdown_andar.items = ["1º Andar", "2º Andar", "3º Andar"]
     self.dropdown_andar.selected_value = self.dropdown_andar.items[0]
@@ -28,8 +28,7 @@ class homepageLimpeza(homepageLimpezaTemplate):
     self.repeating_panel_limpeza.items = anvil.server.call('buscar_instalacoes_responsabilizadas_limpeza', self.usuario_logado['id'])
     self.repeating_panel_warnings.items = anvil.server.call("busca_crises")
     
-  def refresh_panels(self, **event_args):
-    print("passed")
+  def refresh_panels(self, **event_args):    
     self.repeating_panel_limpeza.items = anvil.server.call('buscar_instalacoes_responsabilizadas_limpeza', self.usuario_logado['id'])
     self.repeating_panel_warnings.items = anvil.server.call("busca_crises")
     

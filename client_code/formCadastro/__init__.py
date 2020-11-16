@@ -9,7 +9,7 @@ from anvil.tables import app_tables
 class formCadastro(formCadastroTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    self.init_components(**properties)
+    self.init_components(**properties)    
     self.drop_down_perfilusuario.items = [("Administrador", 1), ("Funcionário",2)]
     # Any code you write here will run when the form opens.
 
@@ -27,18 +27,27 @@ class formCadastro(formCadastroTemplate):
       if cat == "":
         n = Notification("Por favor preencha todos os campos!")
         n.show()
-        return
+        return    
+    
     created = anvil.server.call("inserir_usuario", nome, perfil, cpf, email, senha)
     if created :
       n=Notification("Conta criada. Aguarde o administrador liberar seu acesso")
       n.show()
       open_form('homepageComum')
     
-    def checaConfSenha(self):
-      senhas_iguais = self._senha.text == self.text_box_confirmasenha.text
-      if not senhas_iguais:
-        self.label_senhas_diferentes.visible = True
-      if self.text_box_senha.text == "" or self.text_box_confirmasenha == "":
-        self.label_senhas_diferentes.visible = False
+      
+  def checaConfSenha(self, **event_args):
+    print(self.text_box_confirmasenha.text)
+    print(self.text_box_senha.text)
+    senhas_iguais = (self.text_box_senha.text == self.text_box_confirmasenha.text)
+    if not senhas_iguais:
+      self.label_senhas_diferentes.visible = True
+      return False
+    if self.text_box_confirmasenha == "" or self.text_box_senha == "":
+      self.label_senhas_diferentes.visible = False
+      return False        
+    return True
+  
+
 
 
