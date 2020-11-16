@@ -10,7 +10,7 @@ components:
   layout_properties: {column: JDIHCE}
   event_bindings: {}
 - type: Button
-  properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+  properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
     foreground: '', visible: true, text: inativo, font_size: null, font: '', spacing_above: small,
     icon_align: top, spacing_below: small, italic: false, background: '', bold: false,
     underline: false, icon: _/theme/controls-red.png}
