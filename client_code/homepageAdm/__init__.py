@@ -84,6 +84,8 @@ class homepageAdm(homepageAdmTemplate):
   def link_sair_click(self, **event_args):
     anvil.server.call('logout')
     open_form('homepageComum')
+    n = Notification("Logout efetuado com sucesso")
+    n.show()
 
   def h111_marker_mouse_down(self, x, y, button, **event_args):
     responsavel = anvil.server.call('buscar_responsavel', meuid='h111')    

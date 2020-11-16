@@ -84,7 +84,7 @@ components:
         - {title: Status, id: ZCLJWE, data_key: status}
         - {title: Papel, id: UHDXTG, data_key: papel}
         - {title: Email, id: SHZCPZ, data_key: email}
-        auto_header: true
+        auto_header: false
         tooltip: ''
         border: ''
         foreground: ''
@@ -97,6 +97,39 @@ components:
       name: data_grid_1
       layout_properties: {grid_position: 'ECTZUT,ETKOVC'}
       components:
+      - type: DataRowPanel
+        properties: {}
+        name: data_row_panel_1
+        layout_properties: {}
+        components:
+        - type: Label
+          properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+            visible: true, text: Nome, font_size: null, font: '', spacing_above: small,
+            icon_align: left, spacing_below: small, italic: false, background: '',
+            bold: false, underline: false, icon: ''}
+          name: label_2
+          layout_properties: {column: DADNMB}
+        - type: Label
+          properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+            visible: true, text: Status, font_size: null, font: '', spacing_above: small,
+            icon_align: left, spacing_below: small, italic: false, background: '',
+            bold: false, underline: false, icon: ''}
+          name: label_4
+          layout_properties: {column: ZCLJWE}
+        - type: Label
+          properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+            visible: true, text: Papel, font_size: null, font: '', spacing_above: small,
+            icon_align: left, spacing_below: small, italic: false, background: '',
+            bold: false, underline: false, icon: ''}
+          name: label_5
+          layout_properties: {column: UHDXTG}
+        - type: Label
+          properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+            visible: true, text: Email, font_size: null, font: '', spacing_above: small,
+            icon_align: left, spacing_below: small, italic: false, background: '',
+            bold: false, underline: false, icon: ''}
+          name: label_6
+          layout_properties: {column: SHZCPZ}
       - type: RepeatingPanel
         properties: {spacing_above: none, spacing_below: none, item_template: RowTemplate3}
         name: repeating_panel_usuarios

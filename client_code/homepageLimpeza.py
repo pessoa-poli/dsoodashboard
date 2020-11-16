@@ -42,6 +42,8 @@ class homepageLimpeza(homepageLimpezaTemplate):
   def link_sair_click(self, **event_args):
     anvil.server.call('logout')
     open_form('homepageComum')
+    n = Notification("Logout efetuado com sucesso")
+    n.show()
     
   def hide_markers(self, **event_args):
     self.h111_co2_image.visible = False    

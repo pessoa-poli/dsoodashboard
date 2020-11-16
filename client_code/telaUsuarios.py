@@ -26,6 +26,8 @@ class telaUsuarios(telaUsuariosTemplate):
   def link_1_click(self, **event_args):
     anvil.server.call('logout')
     open_form('homepageComum')
+    n = Notification("Logout efetuado com sucesso")
+    n.show()
 
 
 

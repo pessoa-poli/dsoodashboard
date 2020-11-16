@@ -16,7 +16,7 @@ components:
     underline: false, icon: _/theme/controls-red.png}
   name: button_statusconta
   layout_properties: {column: ZCLJWE}
-  event_bindings: {click: primary_color_3_click}
+  event_bindings: {click: button_statusconta_click}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: '', font_size: null, font: '', spacing_above: large, icon_align: left, spacing_below: none,
@@ -46,12 +46,17 @@ components:
     bold: false
     underline: false
     include_placeholder: false
-  name: drop_down_1
+  name: drop_down_perfil
   layout_properties: {column: UHDXTG}
+  data_bindings:
+  - {property: selected_value, code: 'self.item[''perfilUsuario'']', writeback: true}
+  event_bindings: {change: drop_down_perfil_change}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: '', font_size: null, font: '', spacing_above: large, icon_align: left, spacing_below: small,
     italic: false, background: '', bold: false, underline: false, icon: ''}
   name: label_email
   layout_properties: {column: SHZCPZ}
+  data_bindings:
+  - {property: text, code: 'self.item[''email'']'}
 is_package: true
