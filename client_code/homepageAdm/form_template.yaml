@@ -17,150 +17,164 @@ components:
     layout_properties: {grid_position: 'VSAQUC,IZFVZI'}
     event_bindings: {}
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: none, background: ''}
     name: card_3
     layout_properties: {grid_position: 'ZTCNDQ,KEVBWU'}
     components:
     - type: Button
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: Total de salas, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        spacing_above: none, icon_align: left, spacing_below: none, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: button_total_salas
       layout_properties: {grid_position: 'UNTWEK,VKRWKT'}
       event_bindings: {}
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: '13', font_size: 22, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+        visible: true, text: '13', font_size: 15, font: '', spacing_above: none, icon_align: left,
+        spacing_below: none, italic: false, background: '', bold: true, underline: false,
+        icon: ''}
       name: label_total_salas
       layout_properties: {grid_position: 'NITTGT,NSPERG'}
       event_bindings: {}
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: none, spacing_above: small, col_widths: '{}',
+      spacing_below: none, background: ''}
     name: card_4
     layout_properties: {grid_position: 'ZTCNDQ,ZSDRQO'}
     components:
     - type: Button
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: Baixo risco, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        spacing_above: none, icon_align: left, spacing_below: none, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: button_baixo_risco
       layout_properties: {grid_position: 'ZGUIYT,PCOOKC'}
       event_bindings: {click: button_2_click}
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: '6', font_size: 22, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: true, underline: false,
+        visible: true, text: '6', font_size: 15, font: '', spacing_above: none, icon_align: left,
+        spacing_below: none, italic: false, background: '', bold: true, underline: false,
         icon: ''}
       name: label_baixo_risco
       layout_properties: {grid_position: 'KUCASJ,AVBNSJ'}
       event_bindings: {}
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: none, background: ''}
     name: card_5
     layout_properties: {grid_position: 'ZTCNDQ,BPZKPM'}
     components:
     - type: Button
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: Médio risco, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        spacing_above: none, icon_align: left, spacing_below: none, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: button_medio_risco
-      layout_properties: {grid_position: 'TPNXAO,ZAMVCD'}
+      layout_properties: {grid_position: 'TPNXAO,FOVZAL'}
       event_bindings: {}
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: '2', font_size: 22, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: true, underline: false,
+        visible: true, text: '2', font_size: 15, font: '', spacing_above: none, icon_align: left,
+        spacing_below: none, italic: false, background: '', bold: true, underline: false,
         icon: ''}
       name: label_medio_risco
       layout_properties: {grid_position: 'PPQUCA,ADQKPF'}
       event_bindings: {}
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: none, background: ''}
     name: card_6
     layout_properties: {grid_position: 'ZTCNDQ,LJDJIT'}
     components:
     - type: Button
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: Alto risco, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        spacing_above: none, icon_align: left, spacing_below: none, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: button_alto_risco
       layout_properties: {grid_position: 'UZUNHM,YVGZYU'}
       event_bindings: {}
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: '5', font_size: 22, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: true, underline: false,
+        visible: true, text: '5', font_size: 15, font: '', spacing_above: none, icon_align: left,
+        spacing_below: none, italic: false, background: '', bold: true, underline: false,
         icon: ''}
       name: label_alto_risco
       layout_properties: {grid_position: 'UKVTVR,OFVARL'}
       event_bindings: {}
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
-    name: card_qtd_usuarios
-    layout_properties: {grid_position: 'TCKNCT,COLUFQ'}
-    components:
-    - type: Button
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Quantidade de usuários, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      name: button_qtd_usuarios
-      layout_properties: {grid_position: 'VVGKGC,LQAWIR'}
-      event_bindings: {}
-    - type: Label
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: '68', font_size: 22, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      name: label_qtd_usuarios
-      layout_properties: {grid_position: 'QYFDCB,NAQZBN'}
-      event_bindings: {}
-      data_bindings: []
-    event_bindings: {}
-  - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: none, background: ''}
     name: card_8
     layout_properties: {grid_position: 'TCKNCT,GXWMVG'}
     components:
     - type: Button
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: Disponível para uso, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        font: '', spacing_above: none, icon_align: left, spacing_below: none, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: button_6
-      layout_properties: {grid_position: 'HTAZKJ,ZTBJKR'}
+      layout_properties: {grid_position: 'XPBCTA,ZLJVJT'}
       event_bindings: {}
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: '4', font_size: 22, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: true, underline: false,
+        visible: true, text: '4', font_size: 15, font: '', spacing_above: none, icon_align: left,
+        spacing_below: none, italic: false, background: '', bold: true, underline: false,
         icon: ''}
       name: label_disponivel_para_uso
       layout_properties: {grid_position: 'NGMCHD,WDOOSL'}
       event_bindings: {}
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: none, background: ''}
+    name: card_qtd_usuarios
+    layout_properties: {grid_position: 'TCKNCT,VIMMUM'}
+    components:
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Quantidade de usuários, font_size: null,
+        font: '', spacing_above: none, icon_align: left, spacing_below: none, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: button_qtd_usuarios
+      layout_properties: {grid_position: 'VVGKGC,LQAWIR'}
+      event_bindings: {}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: '68', font_size: 15, font: '', spacing_above: none, icon_align: left,
+        spacing_below: none, italic: false, background: '', bold: true, underline: false,
+        icon: ''}
+      name: label_qtd_usuarios
+      layout_properties: {grid_position: 'QYFDCB,NAQZBN'}
+      event_bindings: {}
+      data_bindings: []
+    event_bindings: {}
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: none, background: ''}
     name: card_9
     layout_properties: {grid_position: 'TCKNCT,KSAJDP'}
     components:
     - type: Button
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: Indisponível para uso, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        font: '', spacing_above: none, icon_align: left, spacing_below: none, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: button_7
-      layout_properties: {grid_position: 'JWFHZB,WEFFAH'}
+      layout_properties: {grid_position: 'JPJKFL,AMYDPI'}
       event_bindings: {}
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: '1', font_size: 22, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: true, underline: false,
+        visible: true, text: '1', font_size: 15, font: '', spacing_above: none, icon_align: left,
+        spacing_below: none, italic: false, background: '', bold: true, underline: false,
         icon: ''}
       name: label_indisponivel_para_uso
       layout_properties: {grid_position: 'OMLEOP,YNWMKP'}
@@ -336,9 +350,9 @@ components:
   components:
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Sair, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
-      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
-      italic: false, background: '', bold: false, underline: false, icon: ''}
+      visible: true, text: Logout, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: right, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: 'fa:sign-out'}
     name: link_sair
     layout_properties: {}
     event_bindings: {click: link_sair_click}
@@ -372,7 +386,7 @@ components:
       icon: ''}
     name: limpeza_link
     layout_properties: {grid_position: 'UQOFZP,QAVJRB'}
-    event_bindings: {}
+    event_bindings: {click: limpeza_link_click}
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: false, text: Configurações, font_size: null, wrap_on: mobile, font: '',

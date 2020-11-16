@@ -22,6 +22,11 @@ class telaUsuarios(telaUsuariosTemplate):
   def link_limpezamanutencao_click(self, **event_args):
     open_form('homepageLimpeza')
 
+  def link_1_click(self, **event_args):
+    anvil.server.call('logout')
+    open_form('homepageComum')
+
+
 
 
 

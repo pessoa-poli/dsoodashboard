@@ -26,7 +26,7 @@ class homepageComum(homepageComumTemplate):
     
     
   def h111_marker_mouse_down(self, x, y, button, **event_args):
-    responsavel = anvil.server.call('buscar_responsavel', meuid='h111')    
+    responsavel = anvil.server.call('buscar_responsavel', meuid='H-111')    
     myvar = alert(content=ambiente_popup(responsavel=responsavel),
                large=True,
                buttons=[],
@@ -62,6 +62,7 @@ class homepageComum(homepageComumTemplate):
       content=loginLightbox(),
       title="Faça seu login",
       large=True,
+      dismissible=True,
     )
 
   def timer_1_tick(self, **event_args):

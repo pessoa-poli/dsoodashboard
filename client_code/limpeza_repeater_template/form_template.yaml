@@ -18,7 +18,7 @@ components:
     layout_properties: {grid_position: 'USIROH,JVNETW'}
     event_bindings: {}
     data_bindings:
-    - {property: text, code: 'self.item[0][''nome'']'}
+    - {property: text, code: 'f"Sala {self.item[''nome'']}"'}
   - type: FlowPanel
     properties: {}
     name: flow_panel_1
@@ -42,7 +42,7 @@ components:
       event_bindings: {}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: red,
-      visible: true, text: Sala marcada para limpeza., font_size: null, font: '',
+      visible: false, text: Sala marcada para limpeza., font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
     name: label_salamarcadaparalimpeza
@@ -57,12 +57,12 @@ components:
     event_bindings: {click: button_marcar_limpa_click}
   - type: Button
     properties: {role: secondary-color, align: full, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: Necessita Limpeza, font_size: null,
+      foreground: black, visible: false, text: Necessita Limpeza, font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
     name: button_necessita_limpeza
     layout_properties: {grid_position: 'BCOXHK,SNPXBI'}
-    event_bindings: {}
+    event_bindings: {click: button_necessita_limpeza_click}
   - type: FlowPanel
     properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
       foreground: '', visible: false, spacing_above: small, spacing_below: small,
@@ -88,7 +88,7 @@ components:
     event_bindings: {}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: red,
-      visible: true, text: Sala marcada para manutenção., font_size: null, font: '',
+      visible: false, text: Sala marcada para manutenção., font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
     name: label_salamarcadaparamanutencao

@@ -164,8 +164,8 @@ components:
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Logout, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
-      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
-      italic: false, background: '', bold: false, underline: false, icon: ''}
+      spacing_above: small, icon_align: right, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: 'fa:sign-out'}
     name: link_sair
     layout_properties: {}
     event_bindings: {click: link_sair_click}
@@ -217,8 +217,9 @@ components:
   name: label_3
   layout_properties: {slot: title}
 - type: Timer
-  properties: {}
+  properties: {interval: 5}
   name: timer_1
+  event_bindings: {tick: timer_1_tick}
 container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}

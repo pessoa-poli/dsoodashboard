@@ -29,23 +29,21 @@ components:
       name: text_box_email
       layout_properties: {grid_position: 'OJKKAT,BEIKMQ'}
       event_bindings: {}
-      data_bindings:
-      - {property: text, code: 'self.dic_login[''email'']', writeback: true}
+      data_bindings: []
   - type: ColumnPanel
     properties: {role: card, col_widths: '{}'}
     name: card_3
     layout_properties: {grid_position: 'LURLIP,KDSQTV'}
     components:
     - type: TextBox
-      properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: senha,
+      properties: {role: null, align: left, hide_text: true, tooltip: '', placeholder: senha,
         border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
         font: '', spacing_above: none, type: text, spacing_below: small, italic: false,
         background: '', bold: false, underline: false}
       name: text_box_senha
       layout_properties: {grid_position: 'EIBASF,LTQQOC'}
       event_bindings: {}
-      data_bindings:
-      - {property: text, code: 'self.dic_login[''senha'']', writeback: true}
+      data_bindings: []
   - type: FlowPanel
     properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: none, spacing_below: none, background: ''}
@@ -60,8 +58,7 @@ components:
       name: check_box_lembrardemim
       layout_properties: {grid_position: 'NEIJXR,SMMVMW'}
       event_bindings: {}
-    data_bindings:
-    - {property: background, code: 'self.dic_login[''lembrar_de_mim'']'}
+    data_bindings: []
   - type: FlowPanel
     properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: none, spacing_below: none, background: ''}

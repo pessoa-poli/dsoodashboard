@@ -11,6 +11,7 @@ components:
       italic: false, background: '', bold: false, underline: false, icon: 'fa:sign-out'}
     name: link_1
     layout_properties: {}
+    event_bindings: {click: link_1_click}
 - type: ColumnPanel
   properties: {col_widths: '{}'}
   name: column_panel_1
@@ -83,7 +84,6 @@ components:
         - {title: Status, id: ZCLJWE, data_key: status}
         - {title: Papel, id: UHDXTG, data_key: papel}
         - {title: Email, id: SHZCPZ, data_key: email}
-        - {title: Configurar Papel, id: VENLJE, data_key: configurar papel}
         auto_header: true
         tooltip: ''
         border: ''

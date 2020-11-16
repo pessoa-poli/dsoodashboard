@@ -1,4 +1,4 @@
-from ._anvil_designer import homepageLimpeza_copyTemplate
+from ._anvil_designer import dumTemplate
 from anvil import *
 import anvil.users
 import anvil.tables as tables
@@ -8,7 +8,7 @@ import anvil.server
 from .homepageAdm import homepageAdm
 from .telaUsuarios import telaUsuarios
 
-class homepageLimpeza_copy(homepageLimpeza_copyTemplate):
+class dum(dumTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.dropdown_andar.items = ["1º Andar", "2º Andar", "3º Andar"]
@@ -21,7 +21,7 @@ class homepageLimpeza_copy(homepageLimpeza_copyTemplate):
     
     self.hide_markers()
     self.setup_FloorPlan_Markers("h111")
-    self.repeating_panel_limpeza.items = anvil.server.call('get_lista_salas')
+    self.repeating_panel_limpeza.items = anvil.server.call('buscar_instalacoes_responsabilizadas_limpeza', )
     
 
   def h111_marker_mouse_down(self, x, y, button, **event_args):

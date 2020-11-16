@@ -12,7 +12,7 @@ components:
   name: buscar_responsavel
   layout_properties:
     col_widths: {}
-    grid_position: GSBKMC,OIAWGI
+    grid_position: ZPQNHW,NGVUNQ GSBKMC,OIAWGI
   event_bindings: {click: buscar_responsavel_click}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
@@ -22,7 +22,7 @@ components:
   name: label_buscar_responsavel
   layout_properties:
     col_widths: {}
-    grid_position: QPCSWU,FXCMKJ
+    grid_position: ZPQNHW,NGVUNQ QPCSWU,FXCMKJ
   event_bindings: {}
 - type: Button
   properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
@@ -31,7 +31,7 @@ components:
       ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
     italic: false, background: '', bold: false, underline: false, icon: ''}
   name: button_gettotalsalas
-  layout_properties: {grid_position: 'IGLQAR,EAGLEN'}
+  layout_properties: {grid_position: 'ZPQNHW,NGVUNQ IGLQAR,EAGLEN'}
   event_bindings: {click: call_back_click}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
@@ -39,7 +39,7 @@ components:
     icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
     underline: false, icon: ''}
   name: label_gettotalsalas
-  layout_properties: {grid_position: 'CWXJZM,IENVDU'}
+  layout_properties: {grid_position: 'ZPQNHW,NGVUNQ CWXJZM,IENVDU'}
   event_bindings: {}
 - type: Button
   properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
@@ -50,7 +50,7 @@ components:
   name: button_getlistasalas
   layout_properties:
     col_widths: {}
-    grid_position: JHCKCV,YAQLAG
+    grid_position: ZPQNHW,NGVUNQ JHCKCV,YAQLAG
   event_bindings: {click: button_getlistasalas_click}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
@@ -60,7 +60,7 @@ components:
   name: label_button_getlistasalas
   layout_properties:
     col_widths: {}
-    grid_position: PSXUWQ,QKZCCQ
+    grid_position: ZPQNHW,NGVUNQ PSXUWQ,QKZCCQ
 - type: Button
   properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
     foreground: '', visible: true, text: 'get_ultimas_medicoes
@@ -70,7 +70,7 @@ components:
   name: get_ultimas_medicoes
   layout_properties:
     col_widths: {}
-    grid_position: SMQHEJ,BLMFNC
+    grid_position: ZPQNHW,NGVUNQ SMQHEJ,BLMFNC
   event_bindings: {}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
@@ -80,7 +80,7 @@ components:
   name: label_get_ultimas_medicoes
   layout_properties:
     col_widths: {}
-    grid_position: YFQNPW,AMZCEG
+    grid_position: ZPQNHW,NGVUNQ YFQNPW,AMZCEG
   event_bindings: {}
 - type: Button
   properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
@@ -91,7 +91,7 @@ components:
   name: get_count_salas_baixo_risco
   layout_properties:
     col_widths: {}
-    grid_position: BCVZFP,ZFJBEE
+    grid_position: ZPQNHW,NGVUNQ BCVZFP,ZFJBEE
   event_bindings: {}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
@@ -101,18 +101,7 @@ components:
   name: label_get_count_salas_baixo_risco
   layout_properties:
     col_widths: {}
-    grid_position: SLHOZB,YDILUL
-  event_bindings: {}
-- type: Button
-  properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
-    foreground: '', visible: true, text: 'get_count_salas_medio_risco
-
-      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-    italic: false, background: '', bold: false, underline: false, icon: ''}
-  name: get_count_salas_medio_risco
-  layout_properties:
-    col_widths: {}
-    grid_position: NGDETU,XJAJNR
+    grid_position: ZPQNHW,NGVUNQ SLHOZB,YDILUL
   event_bindings: {}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
@@ -122,7 +111,7 @@ components:
   name: label_get_count_salas_medio_risco
   layout_properties:
     col_widths: {}
-    grid_position: IJBCOW,MYMTDM
+    grid_position: ZPQNHW,NGVUNQ IJBCOW,MYMTDM
   event_bindings: {}
 - type: Button
   properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
@@ -133,7 +122,7 @@ components:
   name: get_count_salas_alto_risco
   layout_properties:
     col_widths: {}
-    grid_position: FWFVTA,PZIXOI
+    grid_position: ZPQNHW,NGVUNQ FWFVTA,PZIXOI
   event_bindings: {}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
@@ -143,7 +132,7 @@ components:
   name: label_get_count_salas_alto_risco
   layout_properties:
     col_widths: {}
-    grid_position: IBJAXL,SNPSQL
+    grid_position: ZPQNHW,NGVUNQ IBJAXL,SNPSQL
   event_bindings: {}
 - type: Button
   properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
@@ -153,7 +142,7 @@ components:
   name: get_count_usuarios_presentes
   layout_properties:
     col_widths: {}
-    grid_position: BEIZYG,LKJEEP
+    grid_position: ZPQNHW,NGVUNQ BEIZYG,LKJEEP
   event_bindings: {}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
@@ -163,7 +152,7 @@ components:
   name: label_get_count_usuarios_presentes
   layout_properties:
     col_widths: {}
-    grid_position: PXBBIK,CAJDKN
+    grid_position: ZPQNHW,NGVUNQ PXBBIK,CAJDKN
   event_bindings: {}
 - type: Button
   properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
@@ -174,7 +163,7 @@ components:
   name: get_count_salas_disponiveis_pra_uso
   layout_properties:
     col_widths: {}
-    grid_position: NLITNX,ZXXZIP
+    grid_position: ZPQNHW,NGVUNQ NLITNX,ZXXZIP
   event_bindings: {}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
@@ -184,7 +173,7 @@ components:
   name: label_get_count_salas_disponiveis_pra_uso
   layout_properties:
     col_widths: {}
-    grid_position: JNZKCF,XGWZAY
+    grid_position: ZPQNHW,NGVUNQ JNZKCF,XGWZAY
   event_bindings: {}
 - type: Button
   properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
@@ -195,7 +184,7 @@ components:
   name: get_sala_pelo_id
   layout_properties:
     col_widths: {}
-    grid_position: WOONER,METGEX
+    grid_position: ZPQNHW,NGVUNQ WOONER,METGEX
   event_bindings: {click: get_sala_pelo_id_click}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
@@ -205,6 +194,29 @@ components:
   name: label_get_sala_pelo_id
   layout_properties:
     col_widths: {}
-    grid_position: AKJJIQ,YHJLEF
+    grid_position: ZPQNHW,NGVUNQ AKJJIQ,YHJLEF
   event_bindings: {}
+- type: RepeatingPanel
+  properties: {spacing_above: none, spacing_below: none, item_template: dev_form.RowTemplate4}
+  name: repeating_panel_1
+  layout_properties: {grid_position: 'ZPQNHW,NGVUNQ QCGECN,RVTZQZ'}
+- type: Button
+  properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: 'get_count_salas_medio_risco
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: get_count_salas_medio_risco
+  layout_properties:
+    col_widths: {}
+    grid_position: ZPQNHW,YBNIVQ DKQJMN,GYPRMM
+  event_bindings: {}
+- type: Button
+  properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: login, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: button_login
+  layout_properties: {grid_position: 'ZPQNHW,YBNIVQ GLTLEH,WXWINZ'}
+  event_bindings: {click: button_login_click}
 is_package: true

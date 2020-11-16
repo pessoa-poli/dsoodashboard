@@ -11,10 +11,11 @@ from ..telaUsuarios import telaUsuarios
 class homepageAdm(homepageAdmTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    self.init_components(**properties)    
-    # Any code you write here will run when the form opens.
-    self.repeating_panel_warnings.items = anvil.server.call('busca_crises')
-    self.setupData()
+    self.usuario_logado = anvil.server.call('return_current_user')
+    self.init_components(**properties)   
+    # Any code you write here will run when the form opens. 
+    
+    self.repeating_panel_warnings.items = anvil.server.call('busca_crises')    
     self.dropdown_andar.items = ["1º Andar", "2º Andar", "3º Andar"]
     self.dropdown_andar.selected_value = self.dropdown_andar.items[0]
     self.dropdown_bloco.items = ["Bloco A","Bloco B","Bloco C","Bloco D","Bloco E","Bloco F","Bloco G","Bloco H",]
@@ -81,7 +82,7 @@ class homepageAdm(homepageAdmTemplate):
     self.setup_FloorPlan_Markers(room="H-111")
     
   def link_sair_click(self, **event_args):
-    anvil.users.logout()
+    anvil.server.call('logout')
     open_form('homepageComum')
 
   def h111_marker_mouse_down(self, x, y, button, **event_args):
@@ -103,6 +104,10 @@ class homepageAdm(homepageAdmTemplate):
   def timer_1_tick(self, **event_args):
     with anvil.server.no_loading_indicator:
       self.reload_dados()
+
+  def limpeza_link_click(self, **event_args):
+    open_form('homepageLimpeza')
+
 
  
 

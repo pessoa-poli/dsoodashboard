@@ -1,0 +1,9 @@
+container: {type: DataRowPanel}
+components:
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {column: null}
+  data_bindings:
+  - {property: text, code: 'self.item[''nomeUsuario'']'}
+is_package: true

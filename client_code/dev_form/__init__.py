@@ -9,6 +9,7 @@ from anvil.tables import app_tables
 class dev_form(dev_formTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self.repeating_panel_1.items = anvil.server.call('busca_crises')
     self.init_components(**properties)
     self.results_dic = {}
     # Any code you write here will run when the form opens.
@@ -27,6 +28,11 @@ class dev_form(dev_formTemplate):
   def get_sala_pelo_id_click(self, **event_args):
     sala = anvil.server.call('get_sala_pelo_nome', nome_sala="H-111")
     print(sala)
+
+  def button_login_click(self, **event_args):
+    didLogin = anvil.server.call('login', 'teste@teste.com', 'testesenha')
+    print(didLogin)
+
 
 
 

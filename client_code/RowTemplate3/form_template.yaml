@@ -11,14 +11,6 @@ components:
   event_bindings: {}
 - type: Button
   properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
-    foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: large,
-    icon_align: left, spacing_below: none, italic: false, background: '', bold: false,
-    underline: false, icon: 'fa:pencil'}
-  name: button_editar
-  layout_properties: {column: VENLJE}
-  event_bindings: {}
-- type: Button
-  properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
     foreground: '', visible: true, text: inativo, font_size: null, font: '', spacing_above: small,
     icon_align: top, spacing_below: small, italic: false, background: '', bold: false,
     underline: false, icon: _/theme/controls-red.png}
@@ -34,11 +26,27 @@ components:
   event_bindings: {}
   data_bindings:
   - {property: text, code: 'self.item[''nome'']'}
-- type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: '', font_size: null, font: '', spacing_above: large, icon_align: left, spacing_below: small,
-    italic: false, background: '', bold: false, underline: false, icon: ''}
-  name: label_papel
+- type: DropDown
+  properties:
+    role: null
+    align: full
+    tooltip: ''
+    placeholder: ''
+    border: ''
+    enabled: true
+    foreground: ''
+    items: []
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: medium
+    spacing_below: none
+    italic: false
+    background: ''
+    bold: false
+    underline: false
+    include_placeholder: false
+  name: drop_down_1
   layout_properties: {column: UHDXTG}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,

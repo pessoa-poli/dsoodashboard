@@ -9,6 +9,24 @@
     display: flex;
   
 }
+
+.anvil-role-horizontal-repeater>div {
+    min-width: 100px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+  
+}
+.anvil-role-horizontal-repeater .anvil-panel-col {
+    min-width: 100px;
+}  
+.anvil-role-twod-repeater .anvil-role-horizontal-repeater>div {
+    overflow: hidden;
+}
+.anvil-role-twod-repeater>div {
+    overflow-x: auto;
+}
+
 .anvil-role-roommarkersflowpanel {
   width: 67px;
   height: 67px;

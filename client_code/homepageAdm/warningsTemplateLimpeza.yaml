@@ -1,9 +1,3 @@
-container:
-  type: ColumnPanel
-  properties: {role: warning-pink, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: small, spacing_above: small, col_widths: '{}', spacing_below: small,
-    background: ''}
-  event_bindings: {}
 components:
 - type: DataRowPanel
   properties: {role: warningpink, align: left, tooltip: '', border: '', foreground: '',
@@ -49,7 +43,7 @@ components:
     event_bindings: {}
 - type: DataRowPanel
   properties: {role: warningyellow, align: left, tooltip: '', border: '', foreground: '',
-    auto_display_data: true, visible: true, item: null, font_size: null, font: '',
+    auto_display_data: true, visible: false, item: null, font_size: null, font: '',
     spacing_above: none, spacing_below: none, italic: false, background: '', bold: false,
     underline: false}
   name: data_row_panel_temresponsavel
@@ -92,5 +86,9 @@ components:
             tomando providências."'}
       event_bindings: {}
     event_bindings: {}
-is_package: true
-item_type: {table_id: null}
+container:
+  type: ColumnPanel
+  properties: {role: warning-pink, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: small, spacing_above: small, col_widths: '{}', spacing_below: small,
+    background: ''}
+  event_bindings: {}
