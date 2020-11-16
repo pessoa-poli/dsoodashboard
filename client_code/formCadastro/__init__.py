@@ -37,6 +37,8 @@ class formCadastro(formCadastroTemplate):
     def checaConfSenha(self):
       senhas_iguais = self._senha.text == self.text_box_confirmasenha.text
       if not senhas_iguais:
-        self.label_
+        self.label_senhas_diferentes.visible = True
+      if self.text_box_senha.text == "" or self.text_box_confirmasenha == "":
+        self.label_senhas_diferentes.visible = False
 
 

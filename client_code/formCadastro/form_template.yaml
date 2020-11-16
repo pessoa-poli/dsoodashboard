@@ -97,7 +97,7 @@ components:
       properties: {}
       name: text_box_senha
       layout_properties: {grid_position: 'IFTHIN,VCYAZB'}
-      event_bindings: {}
+      event_bindings: {change: checaConfSenha}
     - type: Label
       properties: {role: formlabel, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: Confirmar a senha*, font_size: null, font: '', spacing_above: small,
@@ -109,7 +109,7 @@ components:
       properties: {}
       name: text_box_confirmasenha
       layout_properties: {grid_position: 'DVWAPY,NYMMCO'}
-      event_bindings: {}
+      event_bindings: {change: checaConfSenha}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: red,
         visible: false, text: Sua senha e confirmação não batem!, font_size: null,
