@@ -83,7 +83,7 @@ components:
           icon: ''}
         name: link_cadastrese
         layout_properties: {grid_position: 'PSXOFQ,QPGRFI'}
-        event_bindings: {}
+        event_bindings: {click: link_cadastrese_click}
     event_bindings: {}
   - type: Button
     properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,

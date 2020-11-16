@@ -117,6 +117,7 @@ components:
         background: '', bold: false, underline: false, icon: ''}
       name: button_criarconta
       layout_properties: {grid_position: 'HEVLWX,ALMTNG', full_width_row: false}
+      event_bindings: {click: button_criarconta_click}
     - type: Button
       properties: {role: secondary-color, align: full, tooltip: '', border: '', enabled: true,
         foreground: black, visible: true, text: cancelar, font_size: null, font: '',
@@ -124,6 +125,6 @@ components:
         background: '', bold: false, underline: false, icon: ''}
       name: button_cancelar
       layout_properties: {grid_position: 'MKHVQP,KWHODS'}
-      event_bindings: {}
+      event_bindings: {click: button_cancelar_click}
     event_bindings: {}
 is_package: true

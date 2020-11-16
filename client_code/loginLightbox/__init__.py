@@ -5,6 +5,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from ..formCadastro import formCadastro
 
 class loginLightbox(loginLightboxTemplate):
   def __init__(self, **properties):    
@@ -26,5 +27,9 @@ class loginLightbox(loginLightboxTemplate):
     if not found_me:
       n = Notification("Usuario ou senha incorretos")
       n.show()
+    
+
+  def link_cadastrese_click(self, **event_args):
+    alert(content=formCadastro(), buttons=[],dismissible=True,large=True,title="Faça seu cadastro.")
     
 
