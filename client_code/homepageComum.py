@@ -20,7 +20,7 @@ class homepageComum(homepageComumTemplate):
     self.hide_markers()
     self.setup_FloorPlan_Markers("H-111")
     self.dic_login = {'email':"", "senha":"", "lembrar_de_mim":False}
-    self.label_atualizacaodata.text = f"Última atualidação: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"    
+    self.label_atualizacaodata.text = f"Última atualisação: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"    
     self.init_components(**properties)
     
     # Any code you write here will run when the form opens.    
@@ -67,7 +67,7 @@ class homepageComum(homepageComumTemplate):
     )   
 
   def timer_1_tick(self, **event_args):
-    self.label_atualizacaodata.text = f"Última atualidação: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"
+    self.label_atualizacaodata.text = f"Última atualisação: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"
     with anvil.server.no_loading_indicator:
       self.setup_FloorPlan_Markers("H-111")
       

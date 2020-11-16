@@ -14,7 +14,7 @@ class homepageAdm(homepageAdmTemplate):
     self.usuario_logado = anvil.server.call('return_current_user')
     self.init_components(**properties)   
     # Any code you write here will run when the form opens. 
-    self.label_atualizacaodata.text = f"Última atualidação: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"    
+    self.label_atualizacaodata.text = f"Última atualisação: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"    
     self.repeating_panel_warnings.items = anvil.server.call('busca_crises')    
     self.dropdown_andar.items = ["1º Andar", "2º Andar", "3º Andar"]
     self.dropdown_andar.selected_value = self.dropdown_andar.items[0]
@@ -105,7 +105,7 @@ class homepageAdm(homepageAdmTemplate):
     
   def timer_1_tick(self, **event_args):
     with anvil.server.no_loading_indicator:
-      self.label_atualizacaodata.text = f"Última atualidação: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"
+      self.label_atualizacaodata.text = f"Última atualisação: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"
       self.reload_dados()
 
   def limpeza_link_click(self, **event_args):
