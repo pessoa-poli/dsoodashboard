@@ -20,36 +20,40 @@ components:
     name: flow_panel_vermelho
     layout_properties: {grid_position: 'MASCTX,QOASIT', full_width_row: true, column: null}
     components:
-    - type: FlowPanel
-      properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
-        foreground: '', visible: true, spacing_above: small, spacing_below: small,
-        background: ''}
-      name: flow_panel_2
-      layout_properties: {grid_position: 'MASCTX,GTDLDR', full_width_row: true}
-      components:
-      - type: Label
-        properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-          visible: true, text: 'Sala H-111 Possui um Problema de lotação ', font_size: 15,
-          font: Roboto, spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false, icon: ''}
-        name: label_vermelha_tipoproblema
-        layout_properties: {grid_position: 'KTQSPE,FQXBYE'}
-        data_bindings:
-        - {property: text, code: 'f"Sala {self.item[''nomeInstalacao'']} possui problemas
-            de {self.item[''tipoNotificacao'']}."'}
-        event_bindings: {}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
+        visible: true, text: 'Sala H-111 Possui um Problema de lotação ', font_size: 13,
+        font: Roboto, spacing_above: none, icon_align: left, spacing_below: none,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
+      name: label_vermelha_tipoproblema
+      layout_properties: {grid_position: 'KTQSPE,FQXBYE'}
+      data_bindings:
+      - {property: text, code: 'f"Sala {self.item[''nomeInstalacao'']} possui problemas
+          de {self.item[''tipoNotificacao'']}."'}
+      event_bindings: {}
     - type: Button
       properties: {role: warningbutton, align: center, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: Assumir esse caso, font_size: 12, font: '',
-        spacing_above: medium, icon_align: left, spacing_below: none, italic: false,
+        spacing_above: none, icon_align: left, spacing_below: none, italic: false,
         background: white, bold: false, underline: false, icon: ''}
       name: button_assumiressecaso
       layout_properties: {grid_position: 'MASCTX,DWHHUU', full_width_row: true}
       event_bindings: {click: button_assumiressecaso_click}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: black,
+        visible: false, text: O usuário X já está tomando providências!, font_size: 13,
+        font: '', spacing_above: none, icon_align: left, spacing_below: none, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
+      name: label_usuarioresponsabel
+      layout_properties: {}
+      event_bindings: {}
+      data_bindings:
+      - {property: text, code: 'f"O usuario {self.item[''nomeUsuario'']} já está tomando
+          providências."'}
     event_bindings: {}
 - type: DataRowPanel
   properties: {role: warningyellow, align: left, tooltip: '', border: '', foreground: '',
-    auto_display_data: true, visible: true, item: null, font_size: null, font: '',
+    auto_display_data: true, visible: false, item: null, font_size: null, font: '',
     spacing_above: none, spacing_below: none, italic: false, background: '', bold: false,
     underline: false}
   name: data_row_panel_temresponsavel
@@ -79,17 +83,6 @@ components:
         - {property: text, code: 'f"Sala {self.item[''nomeInstalacao'']} possui problemas
             de {self.item[''tipoNotificacao'']}."'}
         event_bindings: {}
-      - type: Label
-        properties: {role: null, align: center, tooltip: '', border: '', foreground: black,
-          visible: true, text: O usuário X já está tomando providências!, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '', bold: true, underline: false, icon: ''}
-        name: label_usuarioresponsabel
-        layout_properties: {}
-        event_bindings: {}
-        data_bindings:
-        - {property: text, code: 'f"O usuario {self.item[''nomeUsuario'']} já está
-            tomando providências."'}
       event_bindings: {}
     event_bindings: {}
 is_package: true

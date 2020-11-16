@@ -18,7 +18,7 @@ class loginLightbox(loginLightboxTemplate):
     # Any code you write here will run when the form opens.
 
   def button_login_click(self, **event_args):
-    lembrarusuario = self.check_box_lembrardemim.checked
+    lembrarusuario = self.check_box_lembrardemim.checked    
     found_me = anvil.server.call('login', email=self.text_box_email.text, senha=self.text_box_senha.text, lembrardemim=lembrarusuario)
     if found_me:      
       self.raise_event('x-close-alert')
