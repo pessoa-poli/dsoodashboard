@@ -12,6 +12,7 @@ class loginLightbox(loginLightboxTemplate):
   def __init__(self, **properties):    
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.text_box_email.text = anvil.server.call('get_email_do_cookie')
     #if self.usuario_lembrado:
       #self.text_box_email.text = self.usuario_lembrado['email']
 

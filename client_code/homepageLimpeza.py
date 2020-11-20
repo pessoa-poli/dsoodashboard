@@ -26,11 +26,11 @@ class homepageLimpeza(homepageLimpezaTemplate):
     self.hide_markers()
     self.setup_FloorPlan_Markers(1)
     self.repeating_panel_limpeza.items = anvil.server.call('buscar_instalacoes_responsabilizadas_limpeza', self.usuario_logado['id'])
-    self.repeating_panel_warnings.items = anvil.server.call("busca_crises")
+    self.repeating_panel_warnings.items = anvil.server.call("busca_crises", idUsuario=self.usuario_logado['id'])
     
   def refresh_panels(self, **event_args):    
     self.repeating_panel_limpeza.items = anvil.server.call('buscar_instalacoes_responsabilizadas_limpeza', self.usuario_logado['id'])
-    self.repeating_panel_warnings.items = anvil.server.call("busca_crises")
+    self.repeating_panel_warnings.items = anvil.server.call("busca_crises", idUsuario=self.usuario_logado['id'])
     
   def h111_marker_mouse_down(self, x, y, button, **event_args):
     responsavel = anvil.server.call('buscar_responsavel', meuid='h111')    
@@ -80,7 +80,7 @@ class homepageLimpeza(homepageLimpezaTemplate):
     with anvil.server.no_loading_indicator:
       self.label_atualizacaodata.text = f"Última atualisação: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"
       self.repeating_panel_limpeza.items = anvil.server.call('buscar_instalacoes_responsabilizadas_limpeza', self.usuario_logado['id'])
-      self.repeating_panel_warnings.items = anvil.server.call("busca_crises")
+      self.repeating_panel_warnings.items = anvil.server.call("busca_crises", self.usuario_logado['id'])
   
 
 

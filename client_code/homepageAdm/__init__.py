@@ -15,7 +15,7 @@ class homepageAdm(homepageAdmTemplate):
     self.init_components(**properties)   
     # Any code you write here will run when the form opens. 
     self.label_atualizacaodata.text = f"Última atualisação: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"    
-    self.repeating_panel_warnings.items = anvil.server.call('busca_crises')    
+    self.repeating_panel_warnings.items = anvil.server.call('busca_crises', idUsuario=self.usuario_logado['id'])    
     self.dropdown_andar.items = ["1º Andar", "2º Andar", "3º Andar"]
     self.dropdown_andar.selected_value = self.dropdown_andar.items[0]
     self.dropdown_bloco.items = ["Bloco A","Bloco B","Bloco C","Bloco D","Bloco E","Bloco F","Bloco G","Bloco H",]
