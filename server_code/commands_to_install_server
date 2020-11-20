@@ -1,0 +1,4 @@
+sudo apt-get install openjdk-8-jdk
+pip install anvil-app-server
+sudo apt install python3.5-dev
+python3 -m pip install python-dev-tools --upgrade
