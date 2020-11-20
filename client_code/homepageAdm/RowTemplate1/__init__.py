@@ -13,7 +13,7 @@ class RowTemplate1(RowTemplate1Template):
     
     # Any code you write here will run when the form opens.
     self.check_status()
-    
+    print(self.item)
   def check_status(self, **event_args):
     if self.item['co2'] >= 700:
       self.image_co2.source = "_/theme/co2-critico.png"

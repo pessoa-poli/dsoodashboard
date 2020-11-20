@@ -29,6 +29,8 @@ class RowTemplate3(RowTemplate3Template):
     pasa = anvil.server.call('modificar_perfil_usuario',
                       novoPerfilUsuario=self.drop_down_perfil.selected_value ,
                       idUsuario=self.item['id'])
+    n = Notification("Perfil alterado com sucesso")
+    n.show()
     #print(pasa)
     
   def button_statusconta_click(self, **event_args):
@@ -48,6 +50,8 @@ class RowTemplate3(RowTemplate3Template):
                         cadastroConfirmado=self.button_statusconta.tag,
                         idUsuario=self.item['id'])
       return
+    n = Notification("Status alterado com sucesso")
+    n.show()
 
 
 

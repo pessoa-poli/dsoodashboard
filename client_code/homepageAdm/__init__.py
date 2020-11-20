@@ -32,12 +32,13 @@ class homepageAdm(homepageAdmTemplate):
                dismissible=True)
     
   def setupData(self, **event_args):
-    self.salas_repeating_panel.items = anvil.server.call('get_lista_salas')
-    self.label_total_salas.text = str(self.getTotalUsuarios())
-    self.label_alto_risco.text = str(anvil.server.call('get_count_salas_alto_risco'))
-    self.label_medio_risco.text = str(anvil.server.call('get_count_salas_medio_risco'))
-    self.label_baixo_risco.text = str(anvil.server.call('get_count_salas_baixo_risco'))
-    self.label_qtd_usuarios.text = str(anvil.server.call('get_count_usuarios_presentes'))
+    lista_salas = self.salas_repeating_panel.items
+    lista_salas = anvil.server.call('get_lista_salas')
+    self.label_total_salas.text = str(self.getTotalUsuarios())    
+    self.label_alto_risco.text = str(len([cat for cat in self.salas_repeating_panel.items if cat['nivelRisco']==3]))
+    self.label_medio_risco.text = str(len([cat for cat in self.salas_repeating_panel.items if cat['nivelRisco']==2]))
+    self.label_baixo_risco.text = str(len([cat for cat in self.salas_repeating_panel.items if cat['nivelRisco']==1]))
+    self.label_qtd_usuarios.text = str(lambda: x += cat['qtdPessoas'] for cat in lista_salas)
     
   def hide_markers(self, **event_args):
     self.h111_co2_image.visible = False    
@@ -77,8 +78,7 @@ class homepageAdm(homepageAdmTemplate):
 
 
   def reload_dados(self, **event_args):
-    self.setupData()
-    self.refresh_data_bindings()
+    self.setupData()    
     self.setup_FloorPlan_Markers(room="H-111")
     
   def link_sair_click(self, **event_args):
@@ -101,15 +101,15 @@ class homepageAdm(homepageAdmTemplate):
     valor = 0    
     for inst in self.salas_repeating_panel.items:
       valor += inst['qtdPessoas']
-    return valor
+    return valor  
+
+  def limpeza_link_click(self, **event_args):
+    open_form('homepageLimpeza')
     
   def timer_1_tick(self, **event_args):
     with anvil.server.no_loading_indicator:
       self.label_atualizacaodata.text = f"Última atualização: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"
       self.reload_dados()
-
-  def limpeza_link_click(self, **event_args):
-    open_form('homepageLimpeza')
 
 
  
