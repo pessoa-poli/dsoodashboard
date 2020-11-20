@@ -8,10 +8,11 @@ from anvil.tables import app_tables
 
 class RowTemplate3(RowTemplate3Template):
   def __init__(self, **properties):    
-    # Set Form properties and Data Bindings.    
+    # Set Form properties and Data Bindings.
+    self.drop_down_perfil.items = {("Administrador",1), ("Funcionário",2)} 
     self.init_components(**properties)
     print(self.item)
-    self.drop_down_perfil.items = {("Administrador","1"), ("Funcionário","2")} 
+    
     if self.item['cadastroConfirmado']:
       self.button_statusconta.icon = "_/theme/controls-green.png"
       self.button_statusconta.text = "ativo"
@@ -24,11 +25,11 @@ class RowTemplate3(RowTemplate3Template):
     
 
   def drop_down_perfil_change(self, **event_args):
-    print(f"Selected value is {self.drop_down_perfil.selected_value}")    
+    #print(f"Selected value is {self.drop_down_perfil.selected_value}")    
     pasa = anvil.server.call('modificar_perfil_usuario',
                       novoPerfilUsuario=self.drop_down_perfil.selected_value ,
                       idUsuario=self.item['id'])
-    print(pasa)
+    #print(pasa)
     
   def button_statusconta_click(self, **event_args):
     if self.button_statusconta.tag:

@@ -17,7 +17,7 @@ class homepageLimpeza(homepageLimpezaTemplate):
     self.dropdown_bloco.items = ["Bloco A","Bloco B","Bloco C","Bloco D","Bloco E","Bloco F","Bloco G","Bloco H",]
     self.dropdown_bloco.selected_value = self.dropdown_bloco.items[7]  
     self.repeating_panel_limpeza.set_event_handler('x-refresh-panels', self.refresh_panels)
-    self.label_atualizacaodata.text = f"Última atualisação: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"    
+    self.label_atualizacaodata.text = f"Última atualização: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"    
     
     self.init_components(**properties)
     
@@ -78,7 +78,7 @@ class homepageLimpeza(homepageLimpezaTemplate):
 
   def timer_1_tick(self, **event_args):
     with anvil.server.no_loading_indicator:
-      self.label_atualizacaodata.text = f"Última atualisação: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"
+      self.label_atualizacaodata.text = f"Última atualização: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"
       self.repeating_panel_limpeza.items = anvil.server.call('buscar_instalacoes_responsabilizadas_limpeza', self.usuario_logado['id'])
       self.repeating_panel_warnings.items = anvil.server.call("busca_crises", self.usuario_logado['id'])
   
