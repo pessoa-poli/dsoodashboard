@@ -12,6 +12,7 @@ class homepageLimpeza(homepageLimpezaTemplate):
     # Set Form properties and Data Bindings.
     #logou = anvil.server.call('login', 'teste@teste.com', 'testesenha', lembrardemim=False)
     self.usuario_logado = anvil.server.call('return_current_user')
+    print(f"Usuario logado: {self.usuario_logado}")
     self.dropdown_andar.items = ["1º Andar", "2º Andar", "3º Andar"]
     self.dropdown_andar.selected_value = self.dropdown_andar.items[0]
     self.dropdown_bloco.items = ["Bloco A","Bloco B","Bloco C","Bloco D","Bloco E","Bloco F","Bloco G","Bloco H",]
@@ -27,6 +28,11 @@ class homepageLimpeza(homepageLimpezaTemplate):
     self.setup_FloorPlan_Markers(1)
     self.repeating_panel_limpeza.items = anvil.server.call('buscar_instalacoes_responsabilizadas_limpeza', self.usuario_logado['id'])
     self.repeating_panel_warnings.items = anvil.server.call("busca_crises", idUsuario=self.usuario_logado['id'])
+    if self.repeating_panel_warnings.items == None:
+      self.repeating_panel_warnings.items = [{'nomeInstalacao':"none",
+                                              "tipoNotificacao":"none",
+                                              "nomeUsuario":"none"}]
+    print(f"Crises no momento: {self.repeating_panel_warnings.items}")
     
   def refresh_panels(self, **event_args):    
     self.repeating_panel_limpeza.items = anvil.server.call('buscar_instalacoes_responsabilizadas_limpeza', self.usuario_logado['id'])
@@ -80,7 +86,12 @@ class homepageLimpeza(homepageLimpezaTemplate):
     with anvil.server.no_loading_indicator:
       self.label_atualizacaodata.text = f"Última atualização: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"
       self.repeating_panel_limpeza.items = anvil.server.call('buscar_instalacoes_responsabilizadas_limpeza', self.usuario_logado['id'])
-      self.repeating_panel_warnings.items = anvil.server.call("busca_crises", self.usuario_logado['id'])
+      lista_crises_atualizada = anvil.server.call('busca_novas_crises',
+                                       idUsuario=self.usuario_logado['id'],
+                                       listaCrisesVelha=self.repeating_panel_warnings.items)
+      if len(lista_crises_atualizada) > 0:
+        self.repeating_panel_warnings.items=lista_crises_atualizada
+
   
 
 

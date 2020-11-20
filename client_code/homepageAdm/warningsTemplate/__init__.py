@@ -16,12 +16,17 @@ class warningsTemplate(warningsTemplateTemplate):
     
   def showRightDiv(self):
     print(self.item)
+    if self.item['nomeUsuario'] == "none":
+      self.data_row_panel_semresponsavel.visible = False
+      self.data_row_panel_semcrisesnomomento.visible = True
+      return
     if self.item['nomeUsuario'] is not None:
       self.label_amarela_tipoproblema.text = f"Sala {self.item['nomeInstalacao']} possui problemas de {self.item['tipoNotificacao']}."
       self.button_assumiressecaso.text = f"O usuario {self.item['nomeUsuario']} já está tomando providências."
       self.button_assumiressecaso.visible = False
       self.label_usuarioresponsabel.visible = True
       self.data_row_panel_semresponsavel.role = "warningyellow"
+     
       #self.flow_panel_vermelho.visible =  True
       #self.flow_panel_amarelo.visible = False
       #return    
