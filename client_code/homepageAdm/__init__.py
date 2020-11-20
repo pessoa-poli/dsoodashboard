@@ -14,7 +14,7 @@ class homepageAdm(homepageAdmTemplate):
     self.usuario_logado = anvil.server.call('return_current_user')
     self.init_components(**properties)   
     # Any code you write here will run when the form opens. 
-    self.label_atualizacaodata.text = f"Última atualisação: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"    
+    self.label_atualizacaodata.text = f"Última atualização: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"    
     self.repeating_panel_warnings.items = anvil.server.call('busca_crises', idUsuario=self.usuario_logado['id'])    
     self.dropdown_andar.items = ["1º Andar", "2º Andar", "3º Andar"]
     self.dropdown_andar.selected_value = self.dropdown_andar.items[0]
@@ -23,6 +23,11 @@ class homepageAdm(homepageAdmTemplate):
     self.hide_markers()
     self.setup_FloorPlan_Markers("H-111")
     self.visao_geral_link.underline = True
+    self.setupData()
+    if self.repeating_panel_warnings.items == None:
+      self.repeating_panel_warnings.items = [{'nomeInstalacao':"none",
+                                              "tipoNotificacao":"none",
+                                              "nomeUsuario":"none"}]
     
   def h111_marker_mouse_down(self, x, y, button, **event_args):
     responsavel = anvil.server.call('buscar_responsavel', meuid='h111')    
@@ -31,13 +36,17 @@ class homepageAdm(homepageAdmTemplate):
                buttons=[],
                dismissible=True)
     
-  def setupData(self, **event_args):
-    self.salas_repeating_panel.items = anvil.server.call('get_lista_salas')
-    self.label_total_salas.text = str(self.getTotalUsuarios())
-    self.label_alto_risco.text = str(anvil.server.call('get_count_salas_alto_risco'))
-    self.label_medio_risco.text = str(anvil.server.call('get_count_salas_medio_risco'))
-    self.label_baixo_risco.text = str(anvil.server.call('get_count_salas_baixo_risco'))
-    self.label_qtd_usuarios.text = str(anvil.server.call('get_count_usuarios_presentes'))
+  def setupData(self, **event_args):    
+    lista_salas = anvil.server.call('get_lista_salas')
+    self.salas_repeating_panel.items = lista_salas
+    self.label_total_salas.text = len(lista_salas)   
+    self.label_alto_risco.text = str(len([cat for cat in lista_salas if cat['nivelRisco']==3]))
+    self.label_medio_risco.text = str(len([cat for cat in lista_salas if cat['nivelRisco']==2]))
+    self.label_baixo_risco.text = str(len([cat for cat in lista_salas if cat['nivelRisco']==1]))
+    qtd_pessoas = 0
+    for cat in lista_salas:
+        qtd_pessoas += cat['qtdPessoas']
+    self.label_qtd_usuarios.text = qtd_pessoas
     
   def hide_markers(self, **event_args):
     self.h111_co2_image.visible = False    
@@ -77,8 +86,7 @@ class homepageAdm(homepageAdmTemplate):
 
 
   def reload_dados(self, **event_args):
-    self.setupData()
-    self.refresh_data_bindings()
+    self.setupData()    
     self.setup_FloorPlan_Markers(room="H-111")
     
   def link_sair_click(self, **event_args):
@@ -101,15 +109,20 @@ class homepageAdm(homepageAdmTemplate):
     valor = 0    
     for inst in self.salas_repeating_panel.items:
       valor += inst['qtdPessoas']
-    return valor
-    
-  def timer_1_tick(self, **event_args):
-    with anvil.server.no_loading_indicator:
-      self.label_atualizacaodata.text = f"Última atualisação: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"
-      self.reload_dados()
+    return valor  
 
   def limpeza_link_click(self, **event_args):
-    open_form('homepageLimpeza')
+    open_form('homepageLimpeza')  
+  
+  def timer_1_tick(self, **event_args):
+    with anvil.server.no_loading_indicator:
+      self.label_atualizacaodata.text = f"Última atualização: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"
+      self.reload_dados()
+      lista_crises = anvil.server.call('busca_novas_crises',
+                                       idUsuario=self.usuario_logado['id'],
+                                       listaCrisesVelha=self.repeating_panel_warnings.items)
+      if len(lista_crises ) > 0:
+        self.repeating_panel_warnings.items=lista_crises
 
 
  
