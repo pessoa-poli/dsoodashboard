@@ -7,13 +7,26 @@ components:
   - type: Label
     properties: {}
     name: label_atualizacaodata
-    layout_properties: {grid_position: 'CRPZNO,QAVLHP'}
+    layout_properties: {grid_position: 'NLRATK,AOVYSL'}
     data_bindings: []
+  - type: FlowPanel
+    properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: small, spacing_below: none, background: ''}
+    name: flow_panel_3
+    layout_properties: {grid_position: 'JAGIFM,AARAFV'}
+    components:
+    - type: Image
+      properties: {role: null, vertical_align: center, height: 31, tooltip: Legenda da planta,
+        border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: large,
+        source: _/theme/question.png, spacing_below: none, background: '', horizontal_align: center}
+      name: image_legenda
+      layout_properties: {grid_position: 'CRPZNO,QAVLHP BXUMND,XPFKUG', width: 27}
+      event_bindings: {mouse_down: image_legenda_mouse_down}
   - type: FlowPanel
     properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
     name: flow_panel_1
-    layout_properties: {grid_position: 'CRPZNO,PHGILN'}
+    layout_properties: {grid_position: 'JAGIFM,THJUPK'}
     components:
     - type: DropDown
       properties:
@@ -151,6 +164,7 @@ components:
           name: h111_overcapacity_image
           layout_properties: {grid_position: 'YWFGNS,UTZBSA', x: 286.5, y: 136, width: 46}
           event_bindings: {mouse_down: h111_marker_mouse_down}
+        event_bindings: {}
       event_bindings: {}
   event_bindings: {}
 - type: FlowPanel
@@ -180,6 +194,14 @@ components:
     name: visao_geral_link
     layout_properties: {grid_position: 'DEEKVK,IPALKF'}
     event_bindings: {}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Legenda, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: right, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: link_legenda
+    layout_properties: {grid_position: 'TRFPKY,QIKUVT'}
+    event_bindings: {click: link_legenda_click}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Centro de Tecnologia - Bloco H, font_size: null, font: '', spacing_above: small,

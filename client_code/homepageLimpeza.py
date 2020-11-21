@@ -92,6 +92,12 @@ class homepageLimpeza(homepageLimpezaTemplate):
       if len(lista_crises_atualizada) > 0:
         self.repeating_panel_warnings.items=lista_crises_atualizada
 
+  def link_legenda_click(self, **event_args):
+    alert(content=legenda(), buttons=[], large=True)
+
+  def image_legenda_mouse_down(self, x, y, button, **event_args):
+    alert(content=legenda(), buttons=[], large=True)
+
   
 
 

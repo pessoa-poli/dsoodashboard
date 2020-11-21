@@ -11,15 +11,31 @@ components:
     name: repeating_panel_warnings
     layout_properties: {grid_position: 'TMVKKN,HCZFJA'}
   - type: Label
-    properties: {}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: none, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
     name: label_atualizacaodata
-    layout_properties: {grid_position: 'QVBLEJ,WZZVLX'}
+    layout_properties: {grid_position: 'TFCPUT,XHPLDU'}
     data_bindings: []
   - type: FlowPanel
+    properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: small, spacing_below: none, background: ''}
+    name: flow_panel_3
+    layout_properties: {grid_position: 'OVESXA,IKOSBA'}
+    components:
+    - type: Image
+      properties: {role: null, vertical_align: center, height: 28, tooltip: Legenda da planta,
+        border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: large,
+        source: _/theme/question.png, spacing_below: none, background: '', horizontal_align: center}
+      name: image_legenda
+      layout_properties: {grid_position: 'QVBLEJ,WZZVLX YFTSQJ,YAKRQT', width: 27}
+      event_bindings: {mouse_down: image_legenda_mouse_down}
+  - type: FlowPanel
     properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
-      foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+      foreground: '', visible: true, spacing_above: none, spacing_below: small, background: ''}
     name: flow_panel_1
-    layout_properties: {grid_position: 'QVBLEJ,MVZGXM'}
+    layout_properties: {grid_position: 'OVESXA,PCFHZA'}
     event_bindings: {}
     components:
     - type: DropDown
@@ -211,21 +227,32 @@ components:
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Limpeza e manutenção, font_size: null, wrap_on: mobile,
-      font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '{}',
       spacing_below: small, italic: false, background: '', bold: false, underline: true,
       icon: ''}
     name: link_2
     layout_properties: {grid_position: 'OTYREG,WYXWVP'}
     event_bindings: {}
+    components:
+    - type: Link
+      properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Legenda, font_size: null, wrap_on: mobile, font: '',
+        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: link_legenda
+      layout_properties: {grid_position: 'PMTJOX,RXHUQQ'}
+      event_bindings: {click: link_legenda_click}
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: false, text: Configuração, font_size: null, wrap_on: mobile, font: '',
-      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '{}',
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
       icon: ''}
     name: link_3
     layout_properties: {grid_position: 'KIGHKM,HUUXFV'}
     event_bindings: {}
+    components: []
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Centro de Tecnologia - Bloco H, font_size: null, font: '', spacing_above: small,

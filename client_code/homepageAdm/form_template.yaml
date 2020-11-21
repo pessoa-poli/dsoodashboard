@@ -5,7 +5,7 @@ container:
   event_bindings: {}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"YEGAJY":35,"WKIIFT":30}'}
+  properties: {col_widths: '{"WKIIFT":30}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -182,13 +182,26 @@ components:
   - type: Label
     properties: {}
     name: label_atualizacaodata
-    layout_properties: {grid_position: 'REQHPZ,WKIIFT'}
+    layout_properties: {grid_position: 'HIETTM,ZNXRXK'}
     data_bindings: []
+  - type: FlowPanel
+    properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: small, spacing_below: none, background: ''}
+    name: flow_panel_3
+    layout_properties: {grid_position: 'XBLNFD,XZBUYO'}
+    components:
+    - type: Image
+      properties: {role: null, vertical_align: center, height: 31, tooltip: Legenda da planta,
+        border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: large,
+        source: _/theme/question.png, spacing_below: none, background: '', horizontal_align: center}
+      name: image_legenda
+      layout_properties: {grid_position: 'CRPZNO,QAVLHP BXUMND,XPFKUG', width: 27}
+      event_bindings: {mouse_down: image_legenda_mouse_down}
   - type: FlowPanel
     properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
     name: flow_panel_1
-    layout_properties: {grid_position: 'REQHPZ,YEGAJY'}
+    layout_properties: {grid_position: 'XBLNFD,NTYENM'}
     components:
     - type: DropDown
       properties:
@@ -402,6 +415,15 @@ components:
     name: limpeza_link
     layout_properties: {grid_position: 'UQOFZP,QAVJRB'}
     event_bindings: {click: limpeza_link_click}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Legenda, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: right, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: link_legenda
+    layout_properties:
+      col_widths: {}
+      grid_position: MSDPMH,UTGCZQ
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: false, text: Configurações, font_size: null, wrap_on: mobile, font: '',

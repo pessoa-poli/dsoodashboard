@@ -8,6 +8,7 @@ import anvil.server
 from .homepageAdm.ambiente_popup import ambiente_popup
 from .loginLightbox import loginLightbox
 from datetime import datetime
+from .legenda import legenda
 
 class homepageComum(homepageComumTemplate):
   def __init__(self, **properties):
@@ -69,7 +70,14 @@ class homepageComum(homepageComumTemplate):
   def timer_1_tick(self, **event_args):
     self.label_atualizacaodata.text = f"Última atualização: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"
     with anvil.server.no_loading_indicator:
-      self.setup_FloorPlan_Markers("H-111")
+      self.setup_FloorPlan_Markers("H-111")    
       
-      
-      
+
+  def link_legenda_click(self, **event_args):
+    alert(content=legenda(), buttons=[], large=True)
+
+  def image_legenda_mouse_down(self, x, y, button, **event_args):
+    alert(content=legenda(), buttons=[], large=True)
+
+
+
