@@ -5,7 +5,6 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
-from .homepageAdm.ambiente_popup import ambiente_popup
 from .loginLightbox import loginLightbox
 from datetime import datetime
 from .legenda import legenda
