@@ -7,6 +7,7 @@ from anvil.tables import app_tables
 import anvil.server
 from datetime import datetime
 
+
 class homepageAdm(homepageAdmTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -127,7 +128,7 @@ class homepageAdm(homepageAdmTemplate):
     alert(content=legenda(), buttons=[], large=True)
 
   def button_legenda_click(self, **event_args):
-    alert(content=legenda(), buttons=[], large=True)
+    alert(content=, buttons=[], large=True)
 
 
 
