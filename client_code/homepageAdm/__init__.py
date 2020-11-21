@@ -129,7 +129,7 @@ class homepageAdm(homepageAdmTemplate):
     alert(content=legenda(), buttons=[], large=True)
 
   def button_legenda_click(self, **event_args):
-    alert(content=, buttons=[], large=True)
+    alert(content=legenda(), buttons=[], large=True)
 
 
 
