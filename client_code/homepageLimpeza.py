@@ -6,6 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from datetime import datetime
+from ..legenda import legenda
 
 class homepageLimpeza(homepageLimpezaTemplate):
   def __init__(self, **properties):
