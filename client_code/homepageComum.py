@@ -76,8 +76,11 @@ class homepageComum(homepageComumTemplate):
   def link_legenda_click(self, **event_args):
     alert(content=legenda(), buttons=[], large=True)
 
-  def image_legenda_mouse_down(self, x, y, button, **event_args):
+  def button_legenda_click(self, **event_args):
     alert(content=legenda(), buttons=[], large=True)
+
+
+
 
 
 

@@ -1,0 +1,62 @@
+container:
+  type: DataRowPanel
+  event_bindings: {}
+components:
+- type: Image
+  properties: {role: null, vertical_align: center, height: 39, tooltip: '', border: '',
+    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: medium,
+    source: _/theme/users-group-gray.png, spacing_below: none, background: '', horizontal_align: center}
+  name: image_1
+  layout_properties: {column: JDIHCE}
+  event_bindings: {}
+- type: Button
+  properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: inativo, font_size: null, font: '', spacing_above: small,
+    icon_align: top, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: _/theme/controls-red.png}
+  name: button_statusconta
+  layout_properties: {column: ZCLJWE}
+  event_bindings: {click: button_statusconta_click}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: '', spacing_above: large, icon_align: left, spacing_below: none,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: label_nome
+  layout_properties: {column: DADNMB}
+  event_bindings: {}
+  data_bindings:
+  - {property: text, code: 'self.item[''nome'']'}
+- type: DropDown
+  properties:
+    role: null
+    align: full
+    tooltip: ''
+    placeholder: ''
+    border: ''
+    enabled: true
+    foreground: ''
+    items: []
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: medium
+    spacing_below: none
+    italic: false
+    background: ''
+    bold: false
+    underline: false
+    include_placeholder: false
+  name: drop_down_perfil
+  layout_properties: {column: UHDXTG}
+  data_bindings:
+  - {property: selected_value, code: 'self.item[''perfilUsuario'']', writeback: true}
+  event_bindings: {change: drop_down_perfil_change}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: '', spacing_above: large, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: label_email
+  layout_properties: {column: SHZCPZ}
+  data_bindings:
+  - {property: text, code: 'self.item[''email'']'}
+is_package: true
