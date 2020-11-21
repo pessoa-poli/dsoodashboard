@@ -5,7 +5,6 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
-from .ambiente_popup import ambiente_popup
 from datetime import datetime
 
 class homepageAdm(homepageAdmTemplate):
