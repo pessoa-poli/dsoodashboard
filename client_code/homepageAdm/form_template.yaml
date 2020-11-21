@@ -425,6 +425,7 @@ components:
     layout_properties:
       col_widths: {}
       grid_position: MSDPMH,UTGCZQ
+    event_bindings: {click: link_legenda_click}
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: false, text: Configurações, font_size: null, wrap_on: mobile, font: '',
