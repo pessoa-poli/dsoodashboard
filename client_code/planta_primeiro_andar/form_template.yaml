@@ -63,14 +63,14 @@ components:
         width: 34
       event_bindings: {}
     - type: Image
-      properties: {role: null, vertical_align: center, height: '20', tooltip: '',
+      properties: {role: null, vertical_align: center, height: '40', tooltip: '',
         border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
         source: _/theme/settings.png, spacing_below: small, background: '', horizontal_align: center}
       name: image_settings
       layout_properties: {grid_position: 'UIKOWJ,PDDIKG', width: 27}
       event_bindings: {}
     - type: Image
-      properties: {role: null, vertical_align: center, height: '20', tooltip: '',
+      properties: {role: null, vertical_align: center, height: '40', tooltip: '',
         border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
         source: _/theme/co2-critico.png, spacing_below: small, background: '', horizontal_align: center}
       name: image_co2critico
@@ -80,7 +80,7 @@ components:
         width: 29
       event_bindings: {}
     - type: Image
-      properties: {role: null, vertical_align: center, height: '20', tooltip: '',
+      properties: {role: null, vertical_align: center, height: '40', tooltip: '',
         border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
         source: _/theme/broom.png, spacing_below: small, background: '', horizontal_align: center}
       name: image_broom
@@ -90,7 +90,7 @@ components:
         width: 25
       event_bindings: {}
     - type: Image
-      properties: {role: null, vertical_align: center, height: '20', tooltip: '',
+      properties: {role: null, vertical_align: center, height: '40', tooltip: '',
         border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
         source: _/theme/overcapacity.png, spacing_below: small, background: '', horizontal_align: center}
       name: image_overcapacity

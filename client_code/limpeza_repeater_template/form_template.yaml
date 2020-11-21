@@ -9,16 +9,6 @@ components:
   layout_properties: {grid_position: 'LPGTGG,AJEPEH'}
   event_bindings: {}
   components:
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Sala H-111, font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_1
-    layout_properties: {grid_position: 'USIROH,JVNETW'}
-    event_bindings: {}
-    data_bindings:
-    - {property: text, code: 'f"Sala {self.item[''nome'']}"'}
   - type: FlowPanel
     properties: {}
     name: flow_panel_1
@@ -32,6 +22,16 @@ components:
       name: image_1
       layout_properties: {grid_position: 'SNQLMP,XQSPVA', width: 34}
       event_bindings: {}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Sala H-111, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_1
+      layout_properties: {grid_position: 'USIROH,JVNETW'}
+      event_bindings: {}
+      data_bindings:
+      - {property: text, code: 'f"Sala {self.item[''nome'']}"'}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: Limpeza, font_size: null, font: '', spacing_above: small,
