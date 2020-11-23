@@ -72,11 +72,11 @@ class homepageAdm(homepageAdmTemplate):
     return markerInfo
   
   def setup_FloorPlan_Markers(self, room, **event_args):
-    sala = anvil.server.call('get_sala_pelo_nome', nome_sala="H-111")     
+    sala = anvil.server.call('get_sala_pelo_nome', nome_sala="H-111")
     self.h111_co2_image.visible = sala['co2'] > 1000
-    self.h111_overcapacity_image.visible = sala['capacidadeUltrapassada']         
-    self.h111_maintenance_image.visible = sala['necessitaManutencao']    
-    self.h111_broom_image.visible = sala['necessitaLimpeza']      
+    self.h111_overcapacity_image.visible = sala['capacidadeUltrapassada']
+    self.h111_maintenance_image.visible = sala['necessitaManutencao']
+    self.h111_broom_image.visible = sala['necessitaLimpeza']
     if sala['nivel_risco'] == "Baixo":
       self.h111_green_marker.visible = True
     if sala['nivel_risco'] == "Médio":

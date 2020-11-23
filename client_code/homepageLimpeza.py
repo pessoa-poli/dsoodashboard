@@ -59,7 +59,7 @@ class homepageLimpeza(homepageLimpezaTemplate):
     self.h111_broom_image.visible = False    
     self.h111_green_marker.visible = False    
     self.h111_red_marker.visible = False   
-    self.h111_yellow_marker.visible = False   
+    self.h111_yellow_marker.visible = False
     self.h111_ok_image.visible = False
 
   def setup_FloorPlan_Markers(self, room, **event_args):

@@ -15,7 +15,7 @@ class RowTemplate1(RowTemplate1Template):
     self.check_status()
     print(self.item)
   def check_status(self, **event_args):
-    if self.item['co2'] >= 700:
+    if self.item['co2'] >= 1000:
       self.image_co2.source = "_/theme/co2-critico.png"
     if self.item['capacidadeUltrapassada']:
       self.image_capacity.source = "_/theme/overcapacity.png"
