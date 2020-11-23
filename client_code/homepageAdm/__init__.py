@@ -124,7 +124,7 @@ class homepageAdm(homepageAdmTemplate):
                                        listaCrisesVelha=self.repeating_panel_warnings.items)
       if len(lista_crises ) > 0:
         self.repeating_panel_warnings.items=lista_crises
-      self.setup_FloorPlan_Markers()
+      self.setup_FloorPlan_Markers("H-111")
 
   def link_legenda_click(self, **event_args):
     alert(content=legenda(), buttons=[], large=True)
