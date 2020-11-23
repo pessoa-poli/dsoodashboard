@@ -35,7 +35,7 @@ class warningsTemplate(warningsTemplateTemplate):
       
 
   def button_assumiressecaso_click(self, **event_args):    
-    worked = anvil.server.call("atribuir_usuario_a_crise", idUsuario=self.usuario_logado['id'], idInstalacao=self.item['idNotificacao'])
+    worked = anvil.server.call("atribuir_usuario_a_crise", idUsuario=self.usuario_logado['id'], idNotificacao=self.item['idNotificacao'])
     if worked:
       n=Notification("Caso assumido!")
       n.show()
