@@ -1,0 +1,17 @@
+anvil-app-server==1.2
+anvil-uplink==0.3.30
+certifi==2020.11.8
+chardet==3.0.4
+click==7.1.2
+future==0.18.2
+idna==2.10
+progressbar2==3.53.1
+psutil==5.7.3
+psycopg2==2.8.6
+pychrome==0.2.3
+python-utils==2.4.0
+requests==2.25.0
+six==1.15.0
+urllib3==1.26.2
+websocket-client==0.57.0
+ws4py==0.5.1
